@@ -1,0 +1,4148 @@
+[
+ {
+  "id": 1,
+  "camada_id": 1,
+  "nome": "Regional Rio e Serra",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -22.35774,
+  "longitude": -42.39339,
+  "poligono": [
+   [
+    -23.2868,
+    -43.1729
+   ],
+   [
+    -23.2359,
+    -43.3792
+   ],
+   [
+    -23.0968,
+    -43.5302
+   ],
+   [
+    -22.9068,
+    -43.5854
+   ],
+   [
+    -22.1165,
+    -43.6187
+   ],
+   [
+    -21.9265,
+    -43.5637
+   ],
+   [
+    -21.7874,
+    -43.4136
+   ],
+   [
+    -21.7365,
+    -43.2085
+   ],
+   [
+    -21.3745,
+    -41.3244
+   ],
+   [
+    -21.4254,
+    -41.1198
+   ],
+   [
+    -21.5645,
+    -40.9701
+   ],
+   [
+    -21.7545,
+    -40.9153
+   ],
+   [
+    -21.9445,
+    -40.9701
+   ],
+   [
+    -23.0794,
+    -41.6714
+   ],
+   [
+    -23.2185,
+    -41.8224
+   ],
+   [
+    -23.2694,
+    -42.0286
+   ]
+  ],
+  "endereco": "",
+  "cidade": "Rio de Janeiro",
+  "uf": "RJ",
+  "telefone": "",
+  "cor": "#E53935",
+  "horario": "",
+  "servicos": "",
+  "observacoes": "Sede em Rio de Janeiro. Cobre Rio de Janeiro, Petrópolis, Três Rios, Rio Bonito, Cabo Frio, Macaé, Campos dos Goytacazes.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Diego Silva",
+    "funcao": "Gerente Regional",
+    "telefone": "(21) 99999-0095",
+    "obs": ""
+   },
+   {
+    "nome": "Hugo Nascimento",
+    "funcao": "Coordenador Operacional",
+    "telefone": "(21) 99999-0018",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Débora Oliveira",
+    "funcao": "Encarregado",
+    "telefone": "(21) 3333-0076",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 2,
+  "camada_id": 1,
+  "nome": "Regional Minas",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -19.41109,
+  "longitude": -44.01925,
+  "poligono": [
+   [
+    -22.1442,
+    -43.3496
+   ],
+   [
+    -22.0933,
+    -43.5542
+   ],
+   [
+    -21.5744,
+    -45.2037
+   ],
+   [
+    -21.4353,
+    -45.3529
+   ],
+   [
+    -21.2453,
+    -45.4075
+   ],
+   [
+    -18.7561,
+    -44.8316
+   ],
+   [
+    -18.5661,
+    -44.7778
+   ],
+   [
+    -16.5382,
+    -44.2014
+   ],
+   [
+    -16.3991,
+    -44.0562
+   ],
+   [
+    -16.3482,
+    -43.8578
+   ],
+   [
+    -16.3991,
+    -43.6594
+   ],
+   [
+    -16.5382,
+    -43.5142
+   ],
+   [
+    -16.7282,
+    -43.461
+   ],
+   [
+    -21.7642,
+    -42.9404
+   ],
+   [
+    -21.9542,
+    -42.9953
+   ],
+   [
+    -22.0933,
+    -43.145
+   ]
+  ],
+  "endereco": "",
+  "cidade": "Juiz de Fora",
+  "uf": "MG",
+  "telefone": "",
+  "cor": "#1E88E5",
+  "horario": "",
+  "servicos": "",
+  "observacoes": "Sede em Juiz de Fora. Cobre Juiz de Fora, Barbacena, Conselheiro Lafaiete, Belo Horizonte, Sete Lagoas, Curvelo, Montes Claros, Lavras.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Ana Oliveira",
+    "funcao": "Gerente Regional",
+    "telefone": "(32) 99999-0028",
+    "obs": ""
+   },
+   {
+    "nome": "Rita Silva",
+    "funcao": "Coordenador Operacional",
+    "telefone": "(32) 99999-0072",
+    "obs": ""
+   },
+   {
+    "nome": "Caio Martins",
+    "funcao": "Encarregado",
+    "telefone": "(32) 99999-0029",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 3,
+  "camada_id": 1,
+  "nome": "Regional São Paulo",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -22.7293,
+  "longitude": -46.58648,
+  "poligono": [
+   [
+    -24.8672,
+    -47.8442
+   ],
+   [
+    -24.8163,
+    -48.053
+   ],
+   [
+    -24.6772,
+    -48.2058
+   ],
+   [
+    -24.4872,
+    -48.2618
+   ],
+   [
+    -21.1775,
+    -48.2178
+   ],
+   [
+    -20.9875,
+    -48.1632
+   ],
+   [
+    -20.8484,
+    -48.0141
+   ],
+   [
+    -20.7975,
+    -47.8103
+   ],
+   [
+    -20.8484,
+    -47.6065
+   ],
+   [
+    -22.1941,
+    -43.8984
+   ],
+   [
+    -22.3332,
+    -43.7478
+   ],
+   [
+    -22.5232,
+    -43.6927
+   ],
+   [
+    -22.7132,
+    -43.7478
+   ],
+   [
+    -22.8523,
+    -43.8984
+   ],
+   [
+    -24.8163,
+    -47.6354
+   ]
+  ],
+  "endereco": "",
+  "cidade": "Volta Redonda",
+  "uf": "RJ",
+  "telefone": "",
+  "cor": "#43A047",
+  "horario": "",
+  "servicos": "",
+  "observacoes": "Sede em Volta Redonda. Cobre Volta Redonda, Resende, Taubaté, São José dos Campos, São Paulo, Campinas, Ribeirão Preto, Pouso Alegre, Registro.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Iara Silva",
+    "funcao": "Gerente Regional",
+    "telefone": "(24) 99999-0098",
+    "obs": ""
+   },
+   {
+    "nome": "Caio Martins",
+    "funcao": "Coordenador Operacional",
+    "telefone": "(24) 99999-0044",
+    "obs": ""
+   },
+   {
+    "nome": "Eduardo Fernandes",
+    "funcao": "Encarregado",
+    "telefone": "(24) 3333-0014",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 4,
+  "camada_id": 1,
+  "nome": "Regional Triângulo",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -18.94896,
+  "longitude": -48.02923,
+  "poligono": [
+   [
+    -20.1272,
+    -47.9392
+   ],
+   [
+    -20.0763,
+    -48.1411
+   ],
+   [
+    -19.9372,
+    -48.2889
+   ],
+   [
+    -19.1086,
+    -48.6251
+   ],
+   [
+    -18.9186,
+    -48.6789
+   ],
+   [
+    -18.7286,
+    -48.6251
+   ],
+   [
+    -17.9759,
+    -48.2927
+   ],
+   [
+    -17.8368,
+    -48.1463
+   ],
+   [
+    -17.7859,
+    -47.9463
+   ],
+   [
+    -17.8368,
+    -47.7463
+   ],
+   [
+    -17.9759,
+    -47.5999
+   ],
+   [
+    -18.1659,
+    -47.5464
+   ],
+   [
+    -19.7472,
+    -47.5355
+   ],
+   [
+    -19.9372,
+    -47.5895
+   ],
+   [
+    -20.0763,
+    -47.7373
+   ]
+  ],
+  "endereco": "",
+  "cidade": "Uberaba",
+  "uf": "MG",
+  "telefone": "",
+  "cor": "#FB8C00",
+  "horario": "",
+  "servicos": "",
+  "observacoes": "Sede em Uberaba. Cobre Uberaba, Uberlândia, Catalão.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Diego Carvalho",
+    "funcao": "Gerente Regional",
+    "telefone": "(34) 99999-0045",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Iara Souza",
+    "funcao": "Coordenador Operacional",
+    "telefone": "(34) 99999-0094",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Juliana Gomes",
+    "funcao": "Encarregado",
+    "telefone": "(34) 99999-0011",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 5,
+  "camada_id": 1,
+  "nome": "Regional Centro-Oeste",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -16.86196,
+  "longitude": -49.78162,
+  "poligono": [
+   [
+    -18.2584,
+    -51.7204
+   ],
+   [
+    -18.2075,
+    -51.92
+   ],
+   [
+    -18.0684,
+    -52.0662
+   ],
+   [
+    -17.8784,
+    -52.1197
+   ],
+   [
+    -17.6884,
+    -52.0662
+   ],
+   [
+    -17.5493,
+    -51.92
+   ],
+   [
+    -15.999,
+    -49.1514
+   ],
+   [
+    -15.4648,
+    -48.0803
+   ],
+   [
+    -15.4139,
+    -47.8828
+   ],
+   [
+    -15.4648,
+    -47.6853
+   ],
+   [
+    -15.6039,
+    -47.5408
+   ],
+   [
+    -15.7939,
+    -47.4879
+   ],
+   [
+    -15.9839,
+    -47.5408
+   ],
+   [
+    -16.123,
+    -47.6853
+   ],
+   [
+    -18.1214,
+    -50.7197
+   ],
+   [
+    -18.1723,
+    -50.9192
+   ]
+  ],
+  "endereco": "",
+  "cidade": "Brasília",
+  "uf": "DF",
+  "telefone": "",
+  "cor": "#8E24AA",
+  "horario": "",
+  "servicos": "",
+  "observacoes": "Sede em Brasília. Cobre Brasília, Anápolis, Goiânia, Rio Verde, Jataí.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gustavo Carvalho",
+    "funcao": "Gerente Regional",
+    "telefone": "(61) 99999-0074",
+    "obs": ""
+   },
+   {
+    "nome": "Caio Oliveira",
+    "funcao": "Coordenador Operacional",
+    "telefone": "(61) 99999-0006",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "João Oliveira",
+    "funcao": "Encarregado",
+    "telefone": "(61) 3333-0030",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 6,
+  "camada_id": 1,
+  "nome": "Regional Sul",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -26.41201,
+  "longitude": -48.89759,
+  "poligono": [
+   [
+    -27.9754,
+    -48.548
+   ],
+   [
+    -27.9245,
+    -48.7624
+   ],
+   [
+    -27.7854,
+    -48.9193
+   ],
+   [
+    -25.6184,
+    -49.6377
+   ],
+   [
+    -25.4284,
+    -49.6941
+   ],
+   [
+    -25.2384,
+    -49.6377
+   ],
+   [
+    -25.0993,
+    -49.4837
+   ],
+   [
+    -25.0484,
+    -49.2733
+   ],
+   [
+    -25.0993,
+    -49.0629
+   ],
+   [
+    -25.2384,
+    -48.9089
+   ],
+   [
+    -26.1145,
+    -48.4816
+   ],
+   [
+    -26.3045,
+    -48.4248
+   ],
+   [
+    -27.5954,
+    -48.1192
+   ],
+   [
+    -27.7854,
+    -48.1767
+   ],
+   [
+    -27.9245,
+    -48.3336
+   ]
+  ],
+  "endereco": "",
+  "cidade": "Curitiba",
+  "uf": "PR",
+  "telefone": "",
+  "cor": "#00897B",
+  "horario": "",
+  "servicos": "",
+  "observacoes": "Sede em Curitiba. Cobre Curitiba, Joinville, Florianópolis.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Iara Rocha",
+    "funcao": "Gerente Regional",
+    "telefone": "(41) 99999-0082",
+    "obs": ""
+   },
+   {
+    "nome": "Fábio Carvalho",
+    "funcao": "Coordenador Operacional",
+    "telefone": "(41) 99999-0046",
+    "obs": ""
+   },
+   {
+    "nome": "Caio Oliveira",
+    "funcao": "Encarregado",
+    "telefone": "(41) 99999-0078",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 7,
+  "camada_id": 1,
+  "nome": "Regional Bahia",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -13.49073,
+  "longitude": -39.58113,
+  "poligono": [
+   [
+    -15.2415,
+    -40.8442
+   ],
+   [
+    -15.1906,
+    -41.0408
+   ],
+   [
+    -15.0515,
+    -41.1847
+   ],
+   [
+    -14.8615,
+    -41.2374
+   ],
+   [
+    -14.6715,
+    -41.1847
+   ],
+   [
+    -12.0764,
+    -39.3031
+   ],
+   [
+    -11.9373,
+    -39.1607
+   ],
+   [
+    -11.8864,
+    -38.9663
+   ],
+   [
+    -11.9373,
+    -38.7719
+   ],
+   [
+    -12.0764,
+    -38.6295
+   ],
+   [
+    -12.7877,
+    -38.1639
+   ],
+   [
+    -12.9777,
+    -38.1116
+   ],
+   [
+    -13.1677,
+    -38.1639
+   ],
+   [
+    -13.3068,
+    -38.3066
+   ],
+   [
+    -15.1906,
+    -40.6476
+   ]
+  ],
+  "endereco": "",
+  "cidade": "Salvador",
+  "uf": "BA",
+  "telefone": "",
+  "cor": "#F4511E",
+  "horario": "",
+  "servicos": "",
+  "observacoes": "Sede em Salvador. Cobre Salvador, Feira de Santana, Vitória da Conquista.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Sérgio Nascimento",
+    "funcao": "Gerente Regional",
+    "telefone": "(71) 99999-0021",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Marta Lima",
+    "funcao": "Coordenador Operacional",
+    "telefone": "(71) 99999-0082",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Beatriz Fernandes",
+    "funcao": "Encarregado",
+    "telefone": "(71) 99999-0099",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 8,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Rio de Janeiro",
+  "sigla": "RIO",
+  "empresa": "GRUPO",
+  "latitude": -22.910753,
+  "longitude": -43.190252,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 14",
+  "cidade": "Rio de Janeiro",
+  "uf": "RJ",
+  "telefone": "(21) 3333-0064",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Olívia Costa",
+    "funcao": "Responsável",
+    "telefone": "(21) 99999-0034",
+    "obs": ""
+   },
+   {
+    "nome": "Hugo Lima",
+    "funcao": "Resp. Comercial",
+    "telefone": "(21) 99999-0096",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Tânia Gomes",
+    "funcao": "Supervisor de Vendas",
+    "telefone": "(21) 99999-0047",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 9,
+  "camada_id": 5,
+  "nome": "Borracharia Central - Rio de Janeiro",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -22.947709,
+  "longitude": -43.218188,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Rio de Janeiro",
+  "uf": "RJ",
+  "telefone": "",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Borracharia 24 h",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Vitor Oliveira",
+    "funcao": "Proprietário",
+    "telefone": "(21) 99999-0050",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Olívia Lima",
+    "funcao": "Plantão 24 h",
+    "telefone": "(21) 99999-0071",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 10,
+  "camada_id": 2,
+  "nome": "Garagem Petrópolis",
+  "sigla": "PET",
+  "empresa": "ALFA",
+  "latitude": -22.502412,
+  "longitude": -43.194922,
+  "poligono": null,
+  "endereco": "Rua Quinze de Novembro, 1013",
+  "cidade": "Petrópolis",
+  "uf": "RJ",
+  "telefone": "(24) 3333-0021",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Dormitório, limpeza e abastecimento",
+  "observacoes": "Funciona com plantão aos domingos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Rita Rodrigues",
+    "funcao": "Gerente Operacional",
+    "telefone": "(24) 99999-0065",
+    "obs": ""
+   },
+   {
+    "nome": "Helena Araújo",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(24) 99999-0082",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Elaine Carvalho",
+    "funcao": "Mecânico",
+    "telefone": "(24) 99999-0098",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 11,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Petrópolis",
+  "sigla": "PET",
+  "empresa": "ALFA",
+  "latitude": -22.493855,
+  "longitude": -43.177386,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 39",
+  "cidade": "Petrópolis",
+  "uf": "RJ",
+  "telefone": "(24) 3333-0063",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Ivan Araújo",
+    "funcao": "Responsável",
+    "telefone": "(24) 99999-0031",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 12,
+  "camada_id": 4,
+  "nome": "Restaurante Encontro das Águas (Petrópolis)",
+  "sigla": "PET",
+  "empresa": "GRUPO",
+  "latitude": -22.433488,
+  "longitude": -43.244895,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Petrópolis",
+  "uf": "RJ",
+  "telefone": "(24) 3333-0009",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Guincho atende até 150 km.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Sérgio Rodrigues",
+    "funcao": "Responsável",
+    "telefone": "(24) 99999-0034",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 13,
+  "camada_id": 2,
+  "nome": "Garagem Juiz de Fora",
+  "sigla": "JDF",
+  "empresa": "BETA",
+  "latitude": -21.752182,
+  "longitude": -43.358461,
+  "poligono": null,
+  "endereco": "Av. Rodoviária, 3798",
+  "cidade": "Juiz de Fora",
+  "uf": "MG",
+  "telefone": "(32) 3333-0029",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Mecânica, borracharia e guincho",
+  "observacoes": "Entrada de caminhões pelos fundos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Hugo Nascimento",
+    "funcao": "Gerente Operacional",
+    "telefone": "(32) 99999-0001",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 14,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Juiz de Fora",
+  "sigla": "JDF",
+  "empresa": "BETA",
+  "latitude": -21.781845,
+  "longitude": -43.366904,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 22",
+  "cidade": "Juiz de Fora",
+  "uf": "MG",
+  "telefone": "(32) 3333-0066",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Beatriz Ribeiro",
+    "funcao": "Responsável",
+    "telefone": "(32) 99999-0028",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Juliana Ribeiro",
+    "funcao": "Resp. Comercial",
+    "telefone": "(32) 3333-0032",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 15,
+  "camada_id": 5,
+  "nome": "Auto Socorro Horizonte - Juiz de Fora",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -21.748302,
+  "longitude": -43.36417,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Juiz de Fora",
+  "uf": "MG",
+  "telefone": "",
+  "cor": "",
+  "horario": "Plantão 24 h",
+  "servicos": "Auto elétrica",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Débora Fernandes",
+    "funcao": "Proprietário",
+    "telefone": "(32) 3333-0014",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 16,
+  "camada_id": 2,
+  "nome": "Garagem Barbacena",
+  "sigla": "BAR",
+  "empresa": "ALFA",
+  "latitude": -21.224997,
+  "longitude": -43.775768,
+  "poligono": null,
+  "endereco": "Av. Presidente Vargas, 3889",
+  "cidade": "Barbacena",
+  "uf": "MG",
+  "telefone": "(32) 3333-0057",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Mecânica e elétrica",
+  "observacoes": "Guincho atende até 150 km.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Sérgio Silva",
+    "funcao": "Gerente Operacional",
+    "telefone": "(32) 99999-0012",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 17,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Barbacena",
+  "sigla": "BAR",
+  "empresa": "GRUPO",
+  "latitude": -21.221974,
+  "longitude": -43.78175,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 4",
+  "cidade": "Barbacena",
+  "uf": "MG",
+  "telefone": "(32) 3333-0049",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Iara Rocha",
+    "funcao": "Responsável",
+    "telefone": "(32) 99999-0037",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Débora Ribeiro",
+    "funcao": "Resp. Comercial",
+    "telefone": "(32) 99999-0020",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 18,
+  "camada_id": 4,
+  "nome": "Restaurante Parada Certa (Barbacena)",
+  "sigla": "BAR",
+  "empresa": "GRUPO",
+  "latitude": -21.208731,
+  "longitude": -43.763549,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Barbacena",
+  "uf": "MG",
+  "telefone": "(32) 3333-0008",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Entrada de caminhões pelos fundos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Rita Rodrigues",
+    "funcao": "Responsável",
+    "telefone": "(32) 99999-0008",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Fábio Oliveira",
+    "funcao": "Gerente",
+    "telefone": "(32) 3333-0077",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 19,
+  "camada_id": 2,
+  "nome": "Garagem Conselheiro Lafaiete",
+  "sigla": "CLF",
+  "empresa": "ALFA",
+  "latitude": -20.629388,
+  "longitude": -43.781223,
+  "poligono": null,
+  "endereco": "Rua Sete de Setembro, 425",
+  "cidade": "Conselheiro Lafaiete",
+  "uf": "MG",
+  "telefone": "(31) 3333-0085",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Dormitório, limpeza e abastecimento",
+  "observacoes": "Guincho atende até 150 km.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Juliana Lima",
+    "funcao": "Gerente Operacional",
+    "telefone": "(31) 99999-0027",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Caio Fernandes",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(31) 99999-0031",
+    "obs": ""
+   },
+   {
+    "nome": "Beatriz Araújo",
+    "funcao": "Mecânico",
+    "telefone": "(31) 99999-0059",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 20,
+  "camada_id": 5,
+  "nome": "Guincho Mineiro - Conselheiro Lafaiete",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -20.610455,
+  "longitude": -43.73649,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Conselheiro Lafaiete",
+  "uf": "MG",
+  "telefone": "",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Guincho e mecânica",
+  "observacoes": "Acesso pela marginal; estacionamento para 3 carros.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Elaine Carvalho",
+    "funcao": "Proprietário",
+    "telefone": "(31) 99999-0009",
+    "obs": ""
+   },
+   {
+    "nome": "Fábio Rocha",
+    "funcao": "Plantão 24 h",
+    "telefone": "(31) 99999-0070",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 21,
+  "camada_id": 2,
+  "nome": "Garagem Belo Horizonte",
+  "sigla": "BHZ",
+  "empresa": "BETA",
+  "latitude": -19.882594,
+  "longitude": -43.923722,
+  "poligono": null,
+  "endereco": "Av. Brasil, 4643",
+  "cidade": "Belo Horizonte",
+  "uf": "MG",
+  "telefone": "(31) 3333-0014",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Mecânica 24 h",
+  "observacoes": "Acesso pela marginal; estacionamento para 3 carros.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Débora Costa",
+    "funcao": "Gerente Operacional",
+    "telefone": "(31) 99999-0035",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 22,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Belo Horizonte",
+  "sigla": "BHZ",
+  "empresa": "GRUPO",
+  "latitude": -19.907996,
+  "longitude": -43.946356,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 33",
+  "cidade": "Belo Horizonte",
+  "uf": "MG",
+  "telefone": "(31) 3333-0033",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gustavo Lima",
+    "funcao": "Responsável",
+    "telefone": "(31) 99999-0006",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 23,
+  "camada_id": 4,
+  "nome": "Churrascaria Pampa (Belo Horizonte)",
+  "sigla": "BHZ",
+  "empresa": "GRUPO",
+  "latitude": -19.894762,
+  "longitude": -43.972587,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Belo Horizonte",
+  "uf": "MG",
+  "telefone": "(31) 3333-0071",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Ivan Costa",
+    "funcao": "Responsável",
+    "telefone": "(31) 3333-0070",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 24,
+  "camada_id": 2,
+  "nome": "Garagem Sete Lagoas",
+  "sigla": "SET",
+  "empresa": "ALFA",
+  "latitude": -19.497872,
+  "longitude": -44.256174,
+  "poligono": null,
+  "endereco": "Av. Brasil, 3031",
+  "cidade": "Sete Lagoas",
+  "uf": "MG",
+  "telefone": "(31) 3333-0032",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Mecânica 24 h",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Eduardo Martins",
+    "funcao": "Gerente Operacional",
+    "telefone": "(31) 99999-0080",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Elaine Nascimento",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(31) 99999-0021",
+    "obs": ""
+   },
+   {
+    "nome": "Ana Rodrigues",
+    "funcao": "Mecânico",
+    "telefone": "(31) 99999-0095",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 25,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Sete Lagoas",
+  "sigla": "SET",
+  "empresa": "ALFA",
+  "latitude": -19.469331,
+  "longitude": -44.239904,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 18",
+  "cidade": "Sete Lagoas",
+  "uf": "MG",
+  "telefone": "(31) 3333-0090",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Helena Souza",
+    "funcao": "Responsável",
+    "telefone": "(31) 99999-0061",
+    "obs": ""
+   },
+   {
+    "nome": "Juliana Rocha",
+    "funcao": "Resp. Comercial",
+    "telefone": "(31) 3333-0045",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 26,
+  "camada_id": 2,
+  "nome": "Garagem Curvelo",
+  "sigla": "CVL",
+  "empresa": "ALFA",
+  "latitude": -18.777581,
+  "longitude": -44.442322,
+  "poligono": null,
+  "endereco": "Rua das Oficinas, 2386",
+  "cidade": "Curvelo",
+  "uf": "MG",
+  "telefone": "(38) 3333-0066",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Mecânica 24 h",
+  "observacoes": "Funciona com plantão aos domingos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Ana Pereira",
+    "funcao": "Gerente Operacional",
+    "telefone": "(38) 99999-0034",
+    "obs": ""
+   },
+   {
+    "nome": "Tânia Lima",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(38) 99999-0005",
+    "obs": ""
+   },
+   {
+    "nome": "Lucas Fernandes",
+    "funcao": "Mecânico",
+    "telefone": "(38) 99999-0056",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 27,
+  "camada_id": 4,
+  "nome": "Restaurante Encontro das Águas (Curvelo)",
+  "sigla": "CVL",
+  "empresa": "GRUPO",
+  "latitude": -18.805687,
+  "longitude": -44.503198,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Curvelo",
+  "uf": "MG",
+  "telefone": "(38) 3333-0001",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Guincho atende até 150 km. Desativado: parceria encerrada.",
+  "ativo": false,
+  "contatos": [
+   {
+    "nome": "Carla Fernandes",
+    "funcao": "Responsável",
+    "telefone": "(38) 99999-0080",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 28,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Montes Claros",
+  "sigla": "MOC",
+  "empresa": "GRUPO",
+  "latitude": -16.735829,
+  "longitude": -43.861464,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 19",
+  "cidade": "Montes Claros",
+  "uf": "MG",
+  "telefone": "(38) 3333-0017",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Beatriz Gomes",
+    "funcao": "Responsável",
+    "telefone": "(38) 99999-0087",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Vitor Araújo",
+    "funcao": "Resp. Comercial",
+    "telefone": "(38) 99999-0052",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 29,
+  "camada_id": 5,
+  "nome": "Mecânica Diesel Irmãos - Montes Claros",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -16.735211,
+  "longitude": -43.849802,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Montes Claros",
+  "uf": "MG",
+  "telefone": "",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Mecânica diesel",
+  "observacoes": "Funciona com plantão aos domingos. Desativado: parceria encerrada.",
+  "ativo": false,
+  "contatos": [
+   {
+    "nome": "Beatriz Almeida",
+    "funcao": "Proprietário",
+    "telefone": "(38) 99999-0066",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Flávia Rodrigues",
+    "funcao": "Plantão 24 h",
+    "telefone": "(38) 99999-0085",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 30,
+  "camada_id": 2,
+  "nome": "Garagem Volta Redonda",
+  "sigla": "VRD",
+  "empresa": "BETA",
+  "latitude": -22.513894,
+  "longitude": -44.115637,
+  "poligono": null,
+  "endereco": "Rua do Comércio, 2642",
+  "cidade": "Volta Redonda",
+  "uf": "RJ",
+  "telefone": "(24) 3333-0019",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Mecânica, borracharia e guincho",
+  "observacoes": "Entrada de caminhões pelos fundos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Paulo Oliveira",
+    "funcao": "Gerente Operacional",
+    "telefone": "(24) 99999-0059",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Tânia Almeida",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(24) 99999-0092",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 31,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Volta Redonda",
+  "sigla": "VRD",
+  "empresa": "BETA",
+  "latitude": -22.527214,
+  "longitude": -44.118197,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 7",
+  "cidade": "Volta Redonda",
+  "uf": "RJ",
+  "telefone": "(24) 3333-0029",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Rita Rocha",
+    "funcao": "Responsável",
+    "telefone": "(24) 99999-0007",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Hugo Pereira",
+    "funcao": "Resp. Comercial",
+    "telefone": "(24) 99999-0059",
+    "obs": ""
+   },
+   {
+    "nome": "Beatriz Fernandes",
+    "funcao": "Supervisor de Vendas",
+    "telefone": "(24) 99999-0097",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 32,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Resende",
+  "sigla": "RES",
+  "empresa": "GRUPO",
+  "latitude": -22.452712,
+  "longitude": -44.441154,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 29",
+  "cidade": "Resende",
+  "uf": "RJ",
+  "telefone": "(24) 3333-0097",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Iara Ribeiro",
+    "funcao": "Responsável",
+    "telefone": "(24) 99999-0081",
+    "obs": ""
+   },
+   {
+    "nome": "Iara Rocha",
+    "funcao": "Resp. Comercial",
+    "telefone": "(24) 99999-0010",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Iara Fernandes",
+    "funcao": "Supervisor de Vendas",
+    "telefone": "(24) 3333-0041",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 33,
+  "camada_id": 4,
+  "nome": "Churrascaria Pampa (Resende)",
+  "sigla": "RES",
+  "empresa": "GRUPO",
+  "latitude": -22.511598,
+  "longitude": -44.419868,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Resende",
+  "uf": "RJ",
+  "telefone": "(24) 3333-0009",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Funciona com plantão aos domingos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Sérgio Rocha",
+    "funcao": "Responsável",
+    "telefone": "(24) 99999-0054",
+    "obs": ""
+   },
+   {
+    "nome": "Nelson Gomes",
+    "funcao": "Gerente",
+    "telefone": "(24) 3333-0099",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 34,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Taubaté",
+  "sigla": "TAU",
+  "empresa": "GRUPO",
+  "latitude": -23.031185,
+  "longitude": -45.575064,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 20",
+  "cidade": "Taubaté",
+  "uf": "SP",
+  "telefone": "(12) 3333-0054",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Débora Nascimento",
+    "funcao": "Responsável",
+    "telefone": "(12) 99999-0063",
+    "obs": ""
+   },
+   {
+    "nome": "Iara Martins",
+    "funcao": "Resp. Comercial",
+    "telefone": "(12) 99999-0063",
+    "obs": ""
+   },
+   {
+    "nome": "Beatriz Gomes",
+    "funcao": "Supervisor de Vendas",
+    "telefone": "(12) 99999-0093",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 35,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária São José dos Campos",
+  "sigla": "SJC",
+  "empresa": "GRUPO",
+  "latitude": -23.18308,
+  "longitude": -45.900742,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 9",
+  "cidade": "São José dos Campos",
+  "uf": "SP",
+  "telefone": "(12) 3333-0024",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Marta Fernandes",
+    "funcao": "Responsável",
+    "telefone": "(12) 99999-0028",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Eduardo Gomes",
+    "funcao": "Resp. Comercial",
+    "telefone": "(12) 99999-0036",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 36,
+  "camada_id": 4,
+  "nome": "Posto e Restaurante Boa Viagem (São José dos Campos)",
+  "sigla": "SJC",
+  "empresa": "GRUPO",
+  "latitude": -23.194351,
+  "longitude": -45.844256,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "São José dos Campos",
+  "uf": "SP",
+  "telefone": "(12) 3333-0045",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Acesso pela marginal; estacionamento para 3 carros.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Wagner Souza",
+    "funcao": "Responsável",
+    "telefone": "(12) 99999-0097",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 37,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária São Paulo",
+  "sigla": "SPO",
+  "empresa": "ALFA",
+  "latitude": -23.560958,
+  "longitude": -46.634358,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 37",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "telefone": "(11) 3333-0060",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Eduardo Carvalho",
+    "funcao": "Responsável",
+    "telefone": "(11) 99999-0022",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Débora Pereira",
+    "funcao": "Resp. Comercial",
+    "telefone": "(11) 99999-0021",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 38,
+  "camada_id": 4,
+  "nome": "Restaurante Parada Certa (São Paulo)",
+  "sigla": "SPO",
+  "empresa": "GRUPO",
+  "latitude": -23.481878,
+  "longitude": -46.621173,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "telefone": "(11) 3333-0051",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gustavo Nascimento",
+    "funcao": "Responsável",
+    "telefone": "(11) 99999-0014",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 39,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Campinas",
+  "sigla": "CAM",
+  "empresa": "GRUPO",
+  "latitude": -22.928257,
+  "longitude": -47.06129,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 5",
+  "cidade": "Campinas",
+  "uf": "SP",
+  "telefone": "(19) 3333-0083",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gustavo Ribeiro",
+    "funcao": "Responsável",
+    "telefone": "(19) 99999-0014",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 40,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Ribeirão Preto",
+  "sigla": "RPO",
+  "empresa": "GRUPO",
+  "latitude": -21.168148,
+  "longitude": -47.791681,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 40",
+  "cidade": "Ribeirão Preto",
+  "uf": "SP",
+  "telefone": "(16) 3333-0062",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gustavo Lima",
+    "funcao": "Responsável",
+    "telefone": "(16) 99999-0042",
+    "obs": ""
+   },
+   {
+    "nome": "Carla Lima",
+    "funcao": "Resp. Comercial",
+    "telefone": "(16) 99999-0058",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 41,
+  "camada_id": 2,
+  "nome": "Garagem Uberaba",
+  "sigla": "UBA",
+  "empresa": "GAMA",
+  "latitude": -19.747599,
+  "longitude": -47.951449,
+  "poligono": null,
+  "endereco": "Rua São José, 1837",
+  "cidade": "Uberaba",
+  "uf": "MG",
+  "telefone": "(34) 3333-0044",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Abastecimento e lavagem",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Sérgio Silva",
+    "funcao": "Gerente Operacional",
+    "telefone": "(34) 99999-0067",
+    "obs": ""
+   },
+   {
+    "nome": "Carla Nascimento",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(34) 99999-0093",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Eduardo Nascimento",
+    "funcao": "Mecânico",
+    "telefone": "(34) 99999-0089",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 42,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Uberaba",
+  "sigla": "UBA",
+  "empresa": "GAMA",
+  "latitude": -19.747567,
+  "longitude": -47.927483,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 19",
+  "cidade": "Uberaba",
+  "uf": "MG",
+  "telefone": "(34) 3333-0052",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Tânia Carvalho",
+    "funcao": "Responsável",
+    "telefone": "(34) 99999-0061",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 43,
+  "camada_id": 5,
+  "nome": "Oficina Boa Vista - Uberaba",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -19.764121,
+  "longitude": -47.918915,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Uberaba",
+  "uf": "MG",
+  "telefone": "",
+  "cor": "",
+  "horario": "Plantão 24 h",
+  "servicos": "Mecânica diesel",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Karen Pereira",
+    "funcao": "Proprietário",
+    "telefone": "(34) 99999-0096",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 44,
+  "camada_id": 2,
+  "nome": "Garagem Uberlândia",
+  "sigla": "UDI",
+  "empresa": "ALFA",
+  "latitude": -18.901898,
+  "longitude": -48.292845,
+  "poligono": null,
+  "endereco": "Rua Sete de Setembro, 4397",
+  "cidade": "Uberlândia",
+  "uf": "MG",
+  "telefone": "(34) 3333-0025",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Mecânica e elétrica",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Fábio Araújo",
+    "funcao": "Gerente Operacional",
+    "telefone": "(34) 99999-0002",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Sérgio Costa",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(34) 99999-0036",
+    "obs": ""
+   },
+   {
+    "nome": "Sérgio Araújo",
+    "funcao": "Mecânico",
+    "telefone": "(34) 99999-0090",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 45,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Uberlândia",
+  "sigla": "UDI",
+  "empresa": "ALFA",
+  "latitude": -18.908488,
+  "longitude": -48.293096,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 37",
+  "cidade": "Uberlândia",
+  "uf": "MG",
+  "telefone": "(34) 3333-0061",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Karen Rodrigues",
+    "funcao": "Responsável",
+    "telefone": "(34) 99999-0007",
+    "obs": ""
+   },
+   {
+    "nome": "Paulo Pereira",
+    "funcao": "Resp. Comercial",
+    "telefone": "(34) 99999-0009",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 46,
+  "camada_id": 2,
+  "nome": "Garagem Catalão",
+  "sigla": "CAT",
+  "empresa": "ALFA",
+  "latitude": -18.14412,
+  "longitude": -47.914861,
+  "poligono": null,
+  "endereco": "Rua das Oficinas, 2133",
+  "cidade": "Catalão",
+  "uf": "GO",
+  "telefone": "(64) 3333-0098",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Funilaria e pintura",
+  "observacoes": "Funciona com plantão aos domingos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Eduardo Gomes",
+    "funcao": "Gerente Operacional",
+    "telefone": "(64) 99999-0058",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Tânia Martins",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(64) 3333-0040",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 47,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Catalão",
+  "sigla": "CAT",
+  "empresa": "ALFA",
+  "latitude": -18.161515,
+  "longitude": -47.936696,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 14",
+  "cidade": "Catalão",
+  "uf": "GO",
+  "telefone": "(64) 3333-0085",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Sérgio Oliveira",
+    "funcao": "Responsável",
+    "telefone": "(64) 3333-0021",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 48,
+  "camada_id": 4,
+  "nome": "Restaurante Encontro das Águas (Catalão)",
+  "sigla": "CAT",
+  "empresa": "GRUPO",
+  "latitude": -18.170714,
+  "longitude": -48.021078,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Catalão",
+  "uf": "GO",
+  "telefone": "(64) 3333-0091",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Carla Nascimento",
+    "funcao": "Responsável",
+    "telefone": "(64) 99999-0034",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Flávia Almeida",
+    "funcao": "Gerente",
+    "telefone": "(64) 99999-0055",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 49,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Brasília",
+  "sigla": "BSB",
+  "empresa": "GRUPO",
+  "latitude": -15.811044,
+  "longitude": -47.896163,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 39",
+  "cidade": "Brasília",
+  "uf": "DF",
+  "telefone": "(61) 3333-0073",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Diego Rocha",
+    "funcao": "Responsável",
+    "telefone": "(61) 99999-0089",
+    "obs": ""
+   },
+   {
+    "nome": "Iara Ribeiro",
+    "funcao": "Resp. Comercial",
+    "telefone": "(61) 99999-0057",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 50,
+  "camada_id": 2,
+  "nome": "Garagem Anápolis",
+  "sigla": "ANA",
+  "empresa": "BETA",
+  "latitude": -16.361289,
+  "longitude": -48.972375,
+  "poligono": null,
+  "endereco": "Rua Sete de Setembro, 269",
+  "cidade": "Anápolis",
+  "uf": "GO",
+  "telefone": "(62) 3333-0006",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Funilaria e pintura",
+  "observacoes": "Acesso pela marginal; estacionamento para 3 carros.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Juliana Lima",
+    "funcao": "Gerente Operacional",
+    "telefone": "(62) 99999-0024",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Nelson Ribeiro",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(62) 99999-0012",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Lucas Martins",
+    "funcao": "Mecânico",
+    "telefone": "(62) 99999-0043",
+    "obs": ""
+   },
+   {
+    "nome": "Helena Rodrigues",
+    "funcao": "Eletricista",
+    "telefone": "(62) 99999-0043",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 51,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Anápolis",
+  "sigla": "ANA",
+  "empresa": "BETA",
+  "latitude": -16.336571,
+  "longitude": -48.935592,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 30",
+  "cidade": "Anápolis",
+  "uf": "GO",
+  "telefone": "(62) 3333-0041",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Diego Gomes",
+    "funcao": "Responsável",
+    "telefone": "(62) 99999-0066",
+    "obs": ""
+   },
+   {
+    "nome": "Sérgio Rocha",
+    "funcao": "Resp. Comercial",
+    "telefone": "(62) 99999-0053",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 52,
+  "camada_id": 4,
+  "nome": "Lanchonete Trevo (Anápolis)",
+  "sigla": "ANA",
+  "empresa": "GRUPO",
+  "latitude": -16.308479,
+  "longitude": -48.953641,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Anápolis",
+  "uf": "GO",
+  "telefone": "(62) 3333-0098",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Entrada de caminhões pelos fundos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Sérgio Costa",
+    "funcao": "Responsável",
+    "telefone": "(62) 99999-0037",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Paulo Pereira",
+    "funcao": "Gerente",
+    "telefone": "(62) 99999-0004",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 53,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Goiânia",
+  "sigla": "GYN",
+  "empresa": "ALFA",
+  "latitude": -16.706353,
+  "longitude": -49.26848,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 8",
+  "cidade": "Goiânia",
+  "uf": "GO",
+  "telefone": "(62) 3333-0016",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Caio Araújo",
+    "funcao": "Responsável",
+    "telefone": "(62) 99999-0066",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 54,
+  "camada_id": 4,
+  "nome": "Posto Girassol (Goiânia)",
+  "sigla": "GYN",
+  "empresa": "GRUPO",
+  "latitude": -16.610061,
+  "longitude": -49.305803,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Goiânia",
+  "uf": "GO",
+  "telefone": "(62) 3333-0050",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Acesso pela marginal; estacionamento para 3 carros.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Iara Martins",
+    "funcao": "Responsável",
+    "telefone": "(62) 99999-0044",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 55,
+  "camada_id": 5,
+  "nome": "Guincho Rápido - Goiânia",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -16.708616,
+  "longitude": -49.284944,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Goiânia",
+  "uf": "GO",
+  "telefone": "",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Guincho e mecânica",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Paulo Carvalho",
+    "funcao": "Proprietário",
+    "telefone": "(62) 99999-0043",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 56,
+  "camada_id": 2,
+  "nome": "Garagem Rio Verde",
+  "sigla": "RVD",
+  "empresa": "GAMA",
+  "latitude": -17.804776,
+  "longitude": -50.940994,
+  "poligono": null,
+  "endereco": "Rua do Comércio, 4784",
+  "cidade": "Rio Verde",
+  "uf": "GO",
+  "telefone": "(64) 3333-0053",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Mecânica, borracharia e guincho",
+  "observacoes": "Entrada de caminhões pelos fundos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Caio Gomes",
+    "funcao": "Gerente Operacional",
+    "telefone": "(64) 99999-0050",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Flávia Costa",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(64) 99999-0064",
+    "obs": ""
+   },
+   {
+    "nome": "Elaine Fernandes",
+    "funcao": "Mecânico",
+    "telefone": "(64) 99999-0013",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Juliana Rocha",
+    "funcao": "Eletricista",
+    "telefone": "(64) 3333-0002",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 57,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Rio Verde",
+  "sigla": "RVD",
+  "empresa": "GAMA",
+  "latitude": -17.777463,
+  "longitude": -50.900402,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 31",
+  "cidade": "Rio Verde",
+  "uf": "GO",
+  "telefone": "(64) 3333-0044",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Marta Oliveira",
+    "funcao": "Responsável",
+    "telefone": "(64) 99999-0043",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Helena Gomes",
+    "funcao": "Resp. Comercial",
+    "telefone": "(64) 99999-0041",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Eduardo Ribeiro",
+    "funcao": "Supervisor de Vendas",
+    "telefone": "(64) 99999-0070",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 58,
+  "camada_id": 5,
+  "nome": "Guincho Pesado Sul - Rio Verde",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -17.742557,
+  "longitude": -50.894523,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Rio Verde",
+  "uf": "GO",
+  "telefone": "",
+  "cor": "",
+  "horario": "Plantão 24 h",
+  "servicos": "Guincho pesado",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Caio Araújo",
+    "funcao": "Proprietário",
+    "telefone": "(64) 99999-0004",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 59,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Jataí",
+  "sigla": "JTI",
+  "empresa": "GRUPO",
+  "latitude": -17.883406,
+  "longitude": -51.734577,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 37",
+  "cidade": "Jataí",
+  "uf": "GO",
+  "telefone": "(64) 3333-0024",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Helena Gomes",
+    "funcao": "Responsável",
+    "telefone": "(64) 3333-0080",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 60,
+  "camada_id": 4,
+  "nome": "Restaurante Encontro das Águas (Jataí)",
+  "sigla": "JTI",
+  "empresa": "GRUPO",
+  "latitude": -17.935501,
+  "longitude": -51.726616,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Jataí",
+  "uf": "GO",
+  "telefone": "(64) 3333-0059",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Olívia Araújo",
+    "funcao": "Responsável",
+    "telefone": "(64) 99999-0087",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 61,
+  "camada_id": 5,
+  "nome": "Borracharia Central - Jataí",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -17.833876,
+  "longitude": -51.671635,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Jataí",
+  "uf": "GO",
+  "telefone": "",
+  "cor": "",
+  "horario": "Plantão 24 h",
+  "servicos": "Auto elétrica",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Helena Araújo",
+    "funcao": "Proprietário",
+    "telefone": "(64) 99999-0026",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Diego Nascimento",
+    "funcao": "Plantão 24 h",
+    "telefone": "(64) 99999-0049",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 62,
+  "camada_id": 2,
+  "nome": "Garagem Lavras",
+  "sigla": "LAV",
+  "empresa": "BETA",
+  "latitude": -21.210812,
+  "longitude": -45.014134,
+  "poligono": null,
+  "endereco": "Av. das Nações, 2348",
+  "cidade": "Lavras",
+  "uf": "MG",
+  "telefone": "(35) 3333-0088",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Funilaria e pintura",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gustavo Araújo",
+    "funcao": "Gerente Operacional",
+    "telefone": "(35) 99999-0030",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Flávia Carvalho",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(35) 99999-0029",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Gisele Lima",
+    "funcao": "Mecânico",
+    "telefone": "(35) 99999-0087",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Beatriz Costa",
+    "funcao": "Eletricista",
+    "telefone": "(35) 99999-0081",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 63,
+  "camada_id": 5,
+  "nome": "Borracharia Central - Lavras",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -21.291964,
+  "longitude": -45.013314,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Lavras",
+  "uf": "MG",
+  "telefone": "",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Guincho pesado",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Fábio Almeida",
+    "funcao": "Proprietário",
+    "telefone": "(35) 99999-0017",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Lucas Lima",
+    "funcao": "Plantão 24 h",
+    "telefone": "(35) 99999-0022",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 64,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Pouso Alegre",
+  "sigla": "POU",
+  "empresa": "GRUPO",
+  "latitude": -22.215184,
+  "longitude": -45.924431,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 5",
+  "cidade": "Pouso Alegre",
+  "uf": "MG",
+  "telefone": "(35) 3333-0097",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Débora Gomes",
+    "funcao": "Responsável",
+    "telefone": "(35) 99999-0072",
+    "obs": ""
+   },
+   {
+    "nome": "Carla Gomes",
+    "funcao": "Resp. Comercial",
+    "telefone": "(35) 99999-0002",
+    "obs": ""
+   },
+   {
+    "nome": "Olívia Carvalho",
+    "funcao": "Supervisor de Vendas",
+    "telefone": "(35) 99999-0087",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 65,
+  "camada_id": 2,
+  "nome": "Garagem Salvador",
+  "sigla": "SSA",
+  "empresa": "BETA",
+  "latitude": -12.996332,
+  "longitude": -38.534848,
+  "poligono": null,
+  "endereco": "Av. Rodoviária, 2787",
+  "cidade": "Salvador",
+  "uf": "BA",
+  "telefone": "(71) 3333-0009",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Mecânica 24 h",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Wagner Martins",
+    "funcao": "Gerente Operacional",
+    "telefone": "(71) 99999-0015",
+    "obs": ""
+   },
+   {
+    "nome": "Bruno Souza",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(71) 99999-0039",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Hugo Costa",
+    "funcao": "Mecânico",
+    "telefone": "(71) 3333-0050",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 66,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Salvador",
+  "sigla": "SSA",
+  "empresa": "GRUPO",
+  "latitude": -12.959725,
+  "longitude": -38.493741,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 38",
+  "cidade": "Salvador",
+  "uf": "BA",
+  "telefone": "(71) 3333-0094",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Wagner Pereira",
+    "funcao": "Responsável",
+    "telefone": "(71) 99999-0063",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Iara Souza",
+    "funcao": "Resp. Comercial",
+    "telefone": "(71) 99999-0089",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 67,
+  "camada_id": 4,
+  "nome": "Posto Girassol (Salvador)",
+  "sigla": "SSA",
+  "empresa": "GRUPO",
+  "latitude": -12.905611,
+  "longitude": -38.444728,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Salvador",
+  "uf": "BA",
+  "telefone": "(71) 3333-0088",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Bruno Gomes",
+    "funcao": "Responsável",
+    "telefone": "(71) 99999-0036",
+    "obs": ""
+   },
+   {
+    "nome": "Helena Rocha",
+    "funcao": "Gerente",
+    "telefone": "(71) 99999-0012",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 68,
+  "camada_id": 5,
+  "nome": "Guincho Mineiro - Salvador",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -12.930591,
+  "longitude": -38.546542,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Salvador",
+  "uf": "BA",
+  "telefone": "",
+  "cor": "",
+  "horario": "Plantão 24 h",
+  "servicos": "Borracharia 24 h",
+  "observacoes": "Acesso pela marginal; estacionamento para 3 carros.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Eduardo Almeida",
+    "funcao": "Proprietário",
+    "telefone": "(71) 3333-0076",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 69,
+  "camada_id": 2,
+  "nome": "Garagem Feira de Santana",
+  "sigla": "FSA",
+  "empresa": "ALFA",
+  "latitude": -12.291071,
+  "longitude": -38.938263,
+  "poligono": null,
+  "endereco": "Av. Brasil, 2371",
+  "cidade": "Feira de Santana",
+  "uf": "BA",
+  "telefone": "(75) 3333-0070",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Mecânica, borracharia e guincho",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Ana Costa",
+    "funcao": "Gerente Operacional",
+    "telefone": "(75) 99999-0002",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 70,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Feira de Santana",
+  "sigla": "FSA",
+  "empresa": "ALFA",
+  "latitude": -12.276883,
+  "longitude": -38.973349,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 17",
+  "cidade": "Feira de Santana",
+  "uf": "BA",
+  "telefone": "(75) 3333-0017",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Rita Pereira",
+    "funcao": "Responsável",
+    "telefone": "(75) 99999-0096",
+    "obs": ""
+   },
+   {
+    "nome": "Eduardo Carvalho",
+    "funcao": "Resp. Comercial",
+    "telefone": "(75) 99999-0066",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 71,
+  "camada_id": 4,
+  "nome": "Grill da Serra (Feira de Santana)",
+  "sigla": "FSA",
+  "empresa": "GRUPO",
+  "latitude": -12.310952,
+  "longitude": -38.947883,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Feira de Santana",
+  "uf": "BA",
+  "telefone": "(75) 3333-0059",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Helena Gomes",
+    "funcao": "Responsável",
+    "telefone": "(75) 99999-0055",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 72,
+  "camada_id": 5,
+  "nome": "Borracharia Central - Feira de Santana",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -12.309051,
+  "longitude": -39.008221,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Feira de Santana",
+  "uf": "BA",
+  "telefone": "",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Borracharia 24 h",
+  "observacoes": "Entrada de caminhões pelos fundos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Vitor Fernandes",
+    "funcao": "Proprietário",
+    "telefone": "(75) 99999-0049",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Olívia Martins",
+    "funcao": "Plantão 24 h",
+    "telefone": "(75) 99999-0013",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 73,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Vitória da Conquista",
+  "sigla": "VDC",
+  "empresa": "ALFA",
+  "latitude": -14.850741,
+  "longitude": -40.835366,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 28",
+  "cidade": "Vitória da Conquista",
+  "uf": "BA",
+  "telefone": "(77) 3333-0030",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gustavo Rocha",
+    "funcao": "Responsável",
+    "telefone": "(77) 99999-0052",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Karen Martins",
+    "funcao": "Resp. Comercial",
+    "telefone": "(77) 99999-0041",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 74,
+  "camada_id": 4,
+  "nome": "Churrascaria Pampa (Vitória da Conquista)",
+  "sigla": "VDC",
+  "empresa": "GRUPO",
+  "latitude": -14.831609,
+  "longitude": -40.848317,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Vitória da Conquista",
+  "uf": "BA",
+  "telefone": "(77) 3333-0011",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Entrada de caminhões pelos fundos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Lucas Costa",
+    "funcao": "Responsável",
+    "telefone": "(77) 99999-0072",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 75,
+  "camada_id": 2,
+  "nome": "Garagem Registro",
+  "sigla": "REG",
+  "empresa": "BETA",
+  "latitude": -24.493443,
+  "longitude": -47.818047,
+  "poligono": null,
+  "endereco": "Av. das Nações, 521",
+  "cidade": "Registro",
+  "uf": "SP",
+  "telefone": "(13) 3333-0040",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Funilaria e pintura",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Elaine Ribeiro",
+    "funcao": "Gerente Operacional",
+    "telefone": "(13) 99999-0029",
+    "obs": ""
+   },
+   {
+    "nome": "Sérgio Carvalho",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(13) 99999-0015",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 76,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Registro",
+  "sigla": "REG",
+  "empresa": "BETA",
+  "latitude": -24.474911,
+  "longitude": -47.830394,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 39",
+  "cidade": "Registro",
+  "uf": "SP",
+  "telefone": "(13) 3333-0089",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Caio Araújo",
+    "funcao": "Responsável",
+    "telefone": "(13) 3333-0044",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 77,
+  "camada_id": 4,
+  "nome": "Churrascaria Pampa (Registro)",
+  "sigla": "REG",
+  "empresa": "GRUPO",
+  "latitude": -24.476589,
+  "longitude": -47.860075,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Registro",
+  "uf": "SP",
+  "telefone": "(13) 3333-0095",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gisele Gomes",
+    "funcao": "Responsável",
+    "telefone": "(13) 99999-0054",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 78,
+  "camada_id": 5,
+  "nome": "Auto Elétrica Planalto - Registro",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -24.506036,
+  "longitude": -47.861762,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Registro",
+  "uf": "SP",
+  "telefone": "",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Guincho e mecânica",
+  "observacoes": "Entrada de caminhões pelos fundos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Vitor Souza",
+    "funcao": "Proprietário",
+    "telefone": "(13) 3333-0087",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 79,
+  "camada_id": 2,
+  "nome": "Garagem Curitiba",
+  "sigla": "CUR",
+  "empresa": "BETA",
+  "latitude": -25.433719,
+  "longitude": -49.265805,
+  "poligono": null,
+  "endereco": "Av. das Nações, 2337",
+  "cidade": "Curitiba",
+  "uf": "PR",
+  "telefone": "(41) 3333-0015",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Funilaria e pintura",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Beatriz Ribeiro",
+    "funcao": "Gerente Operacional",
+    "telefone": "(41) 3333-0068",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 80,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Curitiba",
+  "sigla": "CUR",
+  "empresa": "BETA",
+  "latitude": -25.439579,
+  "longitude": -49.253922,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 1",
+  "cidade": "Curitiba",
+  "uf": "PR",
+  "telefone": "(41) 3333-0039",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "João Fernandes",
+    "funcao": "Responsável",
+    "telefone": "(41) 99999-0016",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 81,
+  "camada_id": 5,
+  "nome": "Borracharia do Trevo - Curitiba",
+  "sigla": "",
+  "empresa": "TERCEIRO",
+  "latitude": -25.440379,
+  "longitude": -49.252933,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Curitiba",
+  "uf": "PR",
+  "telefone": "",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Guincho e mecânica",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Débora Souza",
+    "funcao": "Proprietário",
+    "telefone": "(41) 99999-0056",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 82,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Joinville",
+  "sigla": "JOI",
+  "empresa": "GRUPO",
+  "latitude": -26.30147,
+  "longitude": -48.845764,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 19",
+  "cidade": "Joinville",
+  "uf": "SC",
+  "telefone": "(47) 3333-0052",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Fábio Rocha",
+    "funcao": "Responsável",
+    "telefone": "(47) 99999-0089",
+    "obs": ""
+   },
+   {
+    "nome": "Helena Pereira",
+    "funcao": "Resp. Comercial",
+    "telefone": "(47) 3333-0032",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 83,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Florianópolis",
+  "sigla": "FLN",
+  "empresa": "GAMA",
+  "latitude": -27.606537,
+  "longitude": -48.536835,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 33",
+  "cidade": "Florianópolis",
+  "uf": "SC",
+  "telefone": "(47) 3333-0015",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gisele Carvalho",
+    "funcao": "Responsável",
+    "telefone": "(47) 99999-0045",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Gustavo Costa",
+    "funcao": "Resp. Comercial",
+    "telefone": "(47) 99999-0031",
+    "obs": ""
+   },
+   {
+    "nome": "Gisele Rodrigues",
+    "funcao": "Supervisor de Vendas",
+    "telefone": "(47) 3333-0078",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 84,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Rio Bonito",
+  "sigla": "RBO",
+  "empresa": "GRUPO",
+  "latitude": -22.709942,
+  "longitude": -42.606851,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 37",
+  "cidade": "Rio Bonito",
+  "uf": "RJ",
+  "telefone": "(21) 3333-0082",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Helena Fernandes",
+    "funcao": "Responsável",
+    "telefone": "(21) 99999-0020",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Olívia Araújo",
+    "funcao": "Resp. Comercial",
+    "telefone": "(21) 3333-0036",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 85,
+  "camada_id": 4,
+  "nome": "Grill da Serra (Rio Bonito)",
+  "sigla": "RBO",
+  "empresa": "GRUPO",
+  "latitude": -22.776629,
+  "longitude": -42.615521,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Rio Bonito",
+  "uf": "RJ",
+  "telefone": "(21) 3333-0008",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Helena Oliveira",
+    "funcao": "Responsável",
+    "telefone": "(21) 99999-0079",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 86,
+  "camada_id": 2,
+  "nome": "Garagem Cabo Frio",
+  "sigla": "CBF",
+  "empresa": "GAMA",
+  "latitude": -22.857604,
+  "longitude": -42.011876,
+  "poligono": null,
+  "endereco": "Av. Brasil, 3784",
+  "cidade": "Cabo Frio",
+  "uf": "RJ",
+  "telefone": "(22) 3333-0078",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Abastecimento e lavagem",
+  "observacoes": "Funciona com plantão aos domingos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Bruno Rocha",
+    "funcao": "Gerente Operacional",
+    "telefone": "(22) 99999-0014",
+    "obs": ""
+   },
+   {
+    "nome": "Carla Rodrigues",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(22) 99999-0006",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 87,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Cabo Frio",
+  "sigla": "CBF",
+  "empresa": "GAMA",
+  "latitude": -22.869761,
+  "longitude": -42.027637,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 24",
+  "cidade": "Cabo Frio",
+  "uf": "RJ",
+  "telefone": "(22) 3333-0037",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "",
+  "observacoes": "Desativado: parceria encerrada.",
+  "ativo": false,
+  "contatos": [
+   {
+    "nome": "Eduardo Fernandes",
+    "funcao": "Responsável",
+    "telefone": "(22) 99999-0087",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Wagner Fernandes",
+    "funcao": "Resp. Comercial",
+    "telefone": "(22) 3333-0009",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 88,
+  "camada_id": 4,
+  "nome": "Restaurante Mineirinho (Cabo Frio)",
+  "sigla": "CBF",
+  "empresa": "GRUPO",
+  "latitude": -22.923936,
+  "longitude": -41.992803,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Cabo Frio",
+  "uf": "RJ",
+  "telefone": "(22) 3333-0043",
+  "cor": "",
+  "horario": "06:00 às 22:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Entrada de caminhões pelos fundos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "João Gomes",
+    "funcao": "Responsável",
+    "telefone": "(22) 99999-0017",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 89,
+  "camada_id": 2,
+  "nome": "Garagem Macaé",
+  "sigla": "MAC",
+  "empresa": "ALFA",
+  "latitude": -22.385432,
+  "longitude": -41.766484,
+  "poligono": null,
+  "endereco": "Av. Industrial, 4412",
+  "cidade": "Macaé",
+  "uf": "RJ",
+  "telefone": "(22) 3333-0086",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Mecânica 24 h",
+  "observacoes": "Funciona com plantão aos domingos.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Ana Carvalho",
+    "funcao": "Gerente Operacional",
+    "telefone": "(22) 99999-0040",
+    "obs": ""
+   },
+   {
+    "nome": "Gisele Fernandes",
+    "funcao": "Encarregado de Manutenção",
+    "telefone": "(22) 99999-0099",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Elaine Costa",
+    "funcao": "Mecânico",
+    "telefone": "(22) 3333-0010",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 90,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Macaé",
+  "sigla": "MAC",
+  "empresa": "ALFA",
+  "latitude": -22.392754,
+  "longitude": -41.776065,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 22",
+  "cidade": "Macaé",
+  "uf": "RJ",
+  "telefone": "(22) 3333-0017",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Elaine Rodrigues",
+    "funcao": "Responsável",
+    "telefone": "(22) 99999-0024",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Flávia Rodrigues",
+    "funcao": "Resp. Comercial",
+    "telefone": "(22) 99999-0093",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 91,
+  "camada_id": 4,
+  "nome": "Lanchonete Trevo (Macaé)",
+  "sigla": "MAC",
+  "empresa": "GRUPO",
+  "latitude": -22.348582,
+  "longitude": -41.828895,
+  "poligono": null,
+  "endereco": "",
+  "cidade": "Macaé",
+  "uf": "RJ",
+  "telefone": "(22) 3333-0079",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche e banheiros",
+  "observacoes": "Pedir no balcão o cartão de refeição da empresa.",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Hugo Nascimento",
+    "funcao": "Responsável",
+    "telefone": "(22) 99999-0040",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Gisele Carvalho",
+    "funcao": "Gerente",
+    "telefone": "(22) 99999-0087",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 92,
+  "camada_id": 3,
+  "nome": "Bilheteria Rodoviária Campos dos Goytacazes",
+  "sigla": "CPS",
+  "empresa": "GAMA",
+  "latitude": -21.754384,
+  "longitude": -41.327654,
+  "poligono": null,
+  "endereco": "Terminal Rodoviário, guichê 13",
+  "cidade": "Campos dos Goytacazes",
+  "uf": "RJ",
+  "telefone": "(22) 3333-0018",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "",
+  "observacoes": "Desativado: parceria encerrada.",
+  "ativo": false,
+  "contatos": [
+   {
+    "nome": "Helena Carvalho",
+    "funcao": "Responsável",
+    "telefone": "(22) 99999-0071",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 93,
+  "camada_id": 4,
+  "nome": "Posto Girassol - BR-040 km 438",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -20.901456,
+  "longitude": -43.763349,
+  "poligono": null,
+  "endereco": "BR-040, km 438",
+  "cidade": "Conselheiro Lafaiete",
+  "uf": "MG",
+  "telefone": "(31) 3333-0004",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Lucas Nascimento",
+    "funcao": "Responsável",
+    "telefone": "(31) 99999-0050",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 94,
+  "camada_id": 4,
+  "nome": "Restaurante Parada Certa - BR-116 km 90",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -22.484346,
+  "longitude": -44.301133,
+  "poligono": null,
+  "endereco": "BR-116 (Via Dutra), km 90",
+  "cidade": "Resende",
+  "uf": "RJ",
+  "telefone": "(24) 3333-0061",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Paulo Rocha",
+    "funcao": "Responsável",
+    "telefone": "(24) 99999-0079",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 95,
+  "camada_id": 4,
+  "nome": "Restaurante Encontro das Águas - BR-116 km 392",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -22.678384,
+  "longitude": -44.857756,
+  "poligono": null,
+  "endereco": "BR-116 (Via Dutra), km 392",
+  "cidade": "Resende",
+  "uf": "RJ",
+  "telefone": "(24) 3333-0015",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Bruno Nascimento",
+    "funcao": "Responsável",
+    "telefone": "(24) 99999-0054",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 96,
+  "camada_id": 4,
+  "nome": "Grill da Serra - BR-116 km 325",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -23.121466,
+  "longitude": -45.699264,
+  "poligono": null,
+  "endereco": "BR-116 (Via Dutra), km 325",
+  "cidade": "Taubaté",
+  "uf": "SP",
+  "telefone": "(12) 3333-0081",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "João Martins",
+    "funcao": "Responsável",
+    "telefone": "(12) 99999-0001",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 97,
+  "camada_id": 4,
+  "nome": "Posto e Restaurante Boa Viagem - BR-381 km 204",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -20.449641,
+  "longitude": -44.366279,
+  "poligono": null,
+  "endereco": "BR-381 (Fernão Dias), km 204",
+  "cidade": "Belo Horizonte",
+  "uf": "MG",
+  "telefone": "(31) 3333-0050",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Lucas Lima",
+    "funcao": "Responsável",
+    "telefone": "(31) 99999-0096",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 98,
+  "camada_id": 4,
+  "nome": "Restaurante Parada Certa - BR-135 km 88",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -19.192058,
+  "longitude": -44.306403,
+  "poligono": null,
+  "endereco": "BR-135, km 88",
+  "cidade": "Sete Lagoas",
+  "uf": "MG",
+  "telefone": "(31) 3333-0070",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Beatriz Rocha",
+    "funcao": "Responsável",
+    "telefone": "(31) 99999-0090",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "07/10/2026 11:02",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 99,
+  "camada_id": 4,
+  "nome": "Restaurante Parada Certa - BR-135 km 254",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -17.57012,
+  "longitude": -44.079503,
+  "poligono": null,
+  "endereco": "BR-135, km 254",
+  "cidade": "Montes Claros",
+  "uf": "MG",
+  "telefone": "(38) 3333-0026",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Karen Araújo",
+    "funcao": "Responsável",
+    "telefone": "(38) 99999-0066",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 100,
+  "camada_id": 4,
+  "nome": "Posto Estrela da Serra - BR-050 km 117",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -17.020388,
+  "longitude": -47.905238,
+  "poligono": null,
+  "endereco": "BR-050, km 117",
+  "cidade": "Catalão",
+  "uf": "GO",
+  "telefone": "(64) 3333-0007",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Iara Pereira",
+    "funcao": "Responsável",
+    "telefone": "(64) 99999-0048",
+    "obs": "Só WhatsApp"
+   },
+   {
+    "nome": "Débora Rocha",
+    "funcao": "Gerente",
+    "telefone": "(64) 99999-0050",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 101,
+  "camada_id": 4,
+  "nome": "Posto Estrela da Serra - BR-050 km 285",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -18.541492,
+  "longitude": -48.094401,
+  "poligono": null,
+  "endereco": "BR-050, km 285",
+  "cidade": "Catalão",
+  "uf": "GO",
+  "telefone": "(64) 3333-0094",
+  "cor": "",
+  "horario": "24 horas",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Gustavo Rodrigues",
+    "funcao": "Responsável",
+    "telefone": "(64) 99999-0070",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "09/10/2026 14:25",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 102,
+  "camada_id": 4,
+  "nome": "Posto Girassol - SP-330 km 373",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -22.140163,
+  "longitude": -47.396,
+  "poligono": null,
+  "endereco": "SP-330 (Anhanguera), km 373",
+  "cidade": "Campinas",
+  "uf": "SP",
+  "telefone": "(19) 3333-0058",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Vitor Martins",
+    "funcao": "Responsável",
+    "telefone": "(19) 99999-0036",
+    "obs": "Falar com ele(a) primeiro"
+   },
+   {
+    "nome": "Bruno Oliveira",
+    "funcao": "Gerente",
+    "telefone": "(19) 99999-0086",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 103,
+  "camada_id": 4,
+  "nome": "Restaurante Encontro das Águas - BR-060 km 454",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -16.114649,
+  "longitude": -48.517117,
+  "poligono": null,
+  "endereco": "BR-060, km 454",
+  "cidade": "Anápolis",
+  "uf": "GO",
+  "telefone": "(62) 3333-0005",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Wagner Carvalho",
+    "funcao": "Responsável",
+    "telefone": "(62) 3333-0047",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 104,
+  "camada_id": 4,
+  "nome": "Lanchonete Trevo - BR-060 km 209",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -16.471028,
+  "longitude": -49.067419,
+  "poligono": null,
+  "endereco": "BR-060, km 209",
+  "cidade": "Anápolis",
+  "uf": "GO",
+  "telefone": "(62) 3333-0098",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Marta Fernandes",
+    "funcao": "Responsável",
+    "telefone": "(62) 99999-0084",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "02/10/2026 09:14",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 105,
+  "camada_id": 4,
+  "nome": "Posto Estrela da Serra - BR-116 km 154",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -24.023102,
+  "longitude": -47.235936,
+  "poligono": null,
+  "endereco": "BR-116 (Régis Bittencourt), km 154",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "telefone": "(11) 3333-0028",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Caio Ribeiro",
+    "funcao": "Responsável",
+    "telefone": "(11) 99999-0026",
+    "obs": ""
+   },
+   {
+    "nome": "Carla Rocha",
+    "funcao": "Gerente",
+    "telefone": "(11) 3333-0023",
+    "obs": "Falar com ele(a) primeiro"
+   }
+  ],
+  "atualizado_em": "13/10/2026 08:50",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 106,
+  "camada_id": 4,
+  "nome": "Grill da Serra - BR-101 km 53",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -27.090976,
+  "longitude": -48.673284,
+  "poligono": null,
+  "endereco": "BR-101 (Sul), km 53",
+  "cidade": "Florianópolis",
+  "uf": "SC",
+  "telefone": "(47) 3333-0039",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Rita Nascimento",
+    "funcao": "Responsável",
+    "telefone": "(47) 99999-0016",
+    "obs": ""
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 107,
+  "camada_id": 4,
+  "nome": "Lanchonete Trevo - BR-101 km 313",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -22.823551,
+  "longitude": -42.941219,
+  "poligono": null,
+  "endereco": "BR-101 (Norte RJ), km 313",
+  "cidade": "Rio de Janeiro",
+  "uf": "RJ",
+  "telefone": "(21) 3333-0071",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Marta Ribeiro",
+    "funcao": "Responsável",
+    "telefone": "(21) 3333-0068",
+    "obs": "Só WhatsApp"
+   }
+  ],
+  "atualizado_em": "03/10/2026 16:40",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 108,
+  "camada_id": 4,
+  "nome": "Posto e Restaurante Boa Viagem - BR-101 km 348",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -22.527524,
+  "longitude": -42.099471,
+  "poligono": null,
+  "endereco": "BR-101 (Norte RJ), km 348",
+  "cidade": "Macaé",
+  "uf": "RJ",
+  "telefone": "(22) 3333-0060",
+  "cor": "",
+  "horario": "07:00 às 19:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Elaine Rodrigues",
+    "funcao": "Responsável",
+    "telefone": "(22) 99999-0099",
+    "obs": ""
+   },
+   {
+    "nome": "Juliana Souza",
+    "funcao": "Gerente",
+    "telefone": "(22) 99999-0016",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ },
+ {
+  "id": 109,
+  "camada_id": 4,
+  "nome": "Posto e Restaurante Boa Viagem - BR-116 km 453",
+  "sigla": "",
+  "empresa": "GRUPO",
+  "latitude": -13.426438,
+  "longitude": -39.802707,
+  "poligono": null,
+  "endereco": "BR-116 (Rio-Bahia), km 453",
+  "cidade": "Feira de Santana",
+  "uf": "BA",
+  "telefone": "(75) 3333-0026",
+  "cor": "",
+  "horario": "05:00 às 23:00",
+  "servicos": "Refeição, lanche, banheiros e estacionamento",
+  "observacoes": "",
+  "ativo": true,
+  "contatos": [
+   {
+    "nome": "Elaine Araújo",
+    "funcao": "Responsável",
+    "telefone": "(75) 99999-0079",
+    "obs": "Plantão noturno"
+   },
+   {
+    "nome": "Wagner Rodrigues",
+    "funcao": "Gerente",
+    "telefone": "(75) 3333-0076",
+    "obs": "Plantão noturno"
+   }
+  ],
+  "atualizado_em": "14/10/2026 17:33",
+  "atualizado_por": "Equipe de cadastro"
+ }
+]

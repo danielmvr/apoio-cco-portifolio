@@ -1,0 +1,31 @@
+# Captura as telas da versao publicada no GitHub Pages e atualiza docs/img/.
+# Execucao manual: aba Actions > "Capturas de tela" > Run workflow.
+name: Capturas de tela
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  capturar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar Playwright
+        run: |
+          pip install playwright==1.48.0
+          python -m playwright install --with-deps chromium
+      - name: Capturar telas da versao web
+        run: python scripts/capturar_telas.py "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+      - name: Salvar no repositorio
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add docs/img
+          git diff --cached --quiet || git commit -m "Atualiza capturas de tela"
+          git push

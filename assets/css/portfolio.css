@@ -1,0 +1,15 @@
+/* Ajustes da versão de portfólio: faixa de aviso, diálogo "Sobre" e botão de WhatsApp desativado. */
+.portfolio { --faixa-altura: 34px; }
+.faixa-aviso { height: var(--faixa-altura); display: flex; align-items: center; gap: 6px; padding: 0 14px; background: #FFF4D6; color: #5A4300; border-bottom: 1px solid #F0DCA4; font-size: .85rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.faixa-aviso a { color: #5A4300; }
+.portfolio .mapa-layout { height: calc(100vh - var(--topo-altura) - var(--faixa-altura)); height: calc(100dvh - var(--topo-altura) - var(--faixa-altura)); }
+@media (max-width: 760px) {
+  .portfolio { --faixa-altura: 30px; }
+  .faixa-aviso { font-size: .8rem; padding: 0 12px; }
+  .faixa-aviso .longo { display: none; }
+}
+.btn-icone.zap.demo { opacity: .45; cursor: not-allowed; }
+.sobre { border: 0; border-radius: var(--raio); box-shadow: var(--sombra); padding: 22px 24px; width: min(620px, 92vw); color: var(--texto); }
+.sobre::backdrop { background: rgba(16, 32, 56, .45); }
+.sobre p { margin: 0 0 10px; }
+.sobre .acoes { display: flex; justify-content: flex-end; margin-top: 14px; }

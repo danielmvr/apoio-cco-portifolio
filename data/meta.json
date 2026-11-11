@@ -1,0 +1,50 @@
+{
+ "seed": 42,
+ "aviso": "Todos os dados são sintéticos. Nenhum registro vem de base real.",
+ "camadas": 5,
+ "locais": 109,
+ "locais_ativos": 105,
+ "contatos": 200,
+ "regionais": 7,
+ "ocorrencias": 7,
+ "carros_com_posicao": 116,
+ "carros_sem_posicao": 5,
+ "empresas": [
+  {
+   "valor": "ALFA",
+   "nome": "Viação Alfa",
+   "sufixo": "A",
+   "cor": "#1565C0"
+  },
+  {
+   "valor": "BETA",
+   "nome": "Expresso Beta",
+   "sufixo": "B",
+   "cor": "#2E7D32"
+  },
+  {
+   "valor": "GAMA",
+   "nome": "Rota Gama",
+   "sufixo": "C",
+   "cor": "#EF6C00"
+  },
+  {
+   "valor": "GRUPO",
+   "nome": "Todas do grupo",
+   "sufixo": "",
+   "cor": "#00838F"
+  },
+  {
+   "valor": "TERCEIRO",
+   "nome": "Terceiro",
+   "sufixo": "",
+   "cor": "#607D8B"
+  }
+ ],
+ "frota": {
+  "repositorio": "danielmvr/monitoramento-rodovias-portifolio",
+  "csv": "https://raw.githubusercontent.com/danielmvr/monitoramento-rodovias-portifolio/main/data/gps_ultimas_posicoes.csv",
+  "meta": "https://raw.githubusercontent.com/danielmvr/monitoramento-rodovias-portifolio/main/data/meta.json",
+  "agora_snapshot": "2026-10-15T15:40:00"
+ }
+}

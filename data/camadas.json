@@ -1,0 +1,62 @@
+[
+ {
+  "id": 1,
+  "nome": "Regional Operacional",
+  "slug": "regional-operacional",
+  "tipo": "AREA",
+  "cor": "#FF5252",
+  "rotulo": "R",
+  "ordem": 10,
+  "visivel": true,
+  "descricao": "Áreas de atuação de cada gerência regional",
+  "total": 7
+ },
+ {
+  "id": 2,
+  "nome": "Pontos de Apoio/Garagem",
+  "slug": "pontos-de-apoio-garagem",
+  "tipo": "PONTO",
+  "cor": "#0288D1",
+  "rotulo": "G",
+  "ordem": 20,
+  "visivel": true,
+  "descricao": "Garagens, oficinas e pontos de apoio da frota",
+  "total": 20
+ },
+ {
+  "id": 3,
+  "nome": "Bilheterias / Pontos de Venda",
+  "slug": "bilheterias-pontos-de-venda",
+  "tipo": "PONTO",
+  "cor": "#FBC02D",
+  "rotulo": "B",
+  "ordem": 30,
+  "visivel": true,
+  "descricao": "Bilheterias em rodoviárias e agências",
+  "total": 32
+ },
+ {
+  "id": 4,
+  "nome": "Paradas Lanche/Refeição",
+  "slug": "paradas-lanche-refeição",
+  "tipo": "PONTO",
+  "cor": "#A52714",
+  "rotulo": "R",
+  "ordem": 40,
+  "visivel": true,
+  "descricao": "Restaurantes e postos conveniados para as paradas",
+  "total": 34
+ },
+ {
+  "id": 5,
+  "nome": "Empresas Terceiras",
+  "slug": "empresas-terceiras",
+  "tipo": "PONTO",
+  "cor": "#6D4C41",
+  "rotulo": "T",
+  "ordem": 50,
+  "visivel": true,
+  "descricao": "Guinchos, mecânicas e borracharias parceiras",
+  "total": 12
+ }
+]

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Apoio CCO, versão de portfólio: mapa de apoio a um centro de controle operacional de ônibus rodoviários, com dados sintéticos, em HTML e JavaScript puros.">
+<title>Apoio CCO · demonstração</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/vendor/markercluster/MarkerCluster.css">
+<link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body class="mapa-pagina portfolio">
+<header class="topo">
+  <a class="marca" href="./">
+    <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+    <span>Apoio CCO</span>
+    <span class="versao" title="Versão de portfólio com dados sintéticos">portfólio</span>
+  </a>
+  <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" data-toggle="menu">&#9776;</button>
+  <nav class="menu" id="menu">
+    <a href="./" class="ativo">Mapa</a>
+    <a href="#sobre" id="abrir-sobre">Sobre</a>
+    <a href="https://danielmvr.github.io/monitoramento-rodovias-portifolio/" target="_blank" rel="noopener" title="Projeto irmão: de lá vem a frota deste mapa">Monitoramento de Rodovias</a>
+    <a href="https://github.com/danielmvr/apoio-cco-portifolio" target="_blank" rel="noopener">Código</a>
+  </nav>
+</header>
+<div class="faixa-aviso" role="note">
+  <strong>Demonstração com dados sintéticos.</strong> <span class="longo">Locais, contatos, telefones, frota e ocorrências são fictícios.
+  A frota é lida do projeto <a href="https://github.com/danielmvr/monitoramento-rodovias-portifolio" target="_blank" rel="noopener">Monitoramento de Rodovias</a>;
+  o relógio está no horário do snapshot da frota.</span> <a href="#sobre" id="abrir-sobre-2">Saiba mais</a>.
+</div>
+<div class="mapa-layout" id="mapa-layout">
+  <div class="mapa-area">
+    <div id="mapa" role="application" aria-label="Mapa de apoio"></div>
+    <section class="painel-oc" id="painel-oc" aria-label="Ocorrências de socorro abertas">
+      <div class="painel-oc-topo">
+        <h2>Ocorrências abertas</h2>
+        <span class="painel-oc-total" id="ocorrencias-total">0</span>
+        <button type="button" class="painel-oc-recolher" id="oc-recolher" aria-label="Recolher a lista de ocorrências" title="Recolher">
+          <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+      <p class="painel-oc-info"><span id="ocorrencias-info">Ocorrências sintéticas</span> · <a href="https://danielmvr.github.io/monitoramento-rodovias-portifolio/" target="_blank" rel="noopener">ver a frota no Monitoramento</a></p>
+      <p class="painel-oc-erro" id="ocorrencias-erro" hidden></p>
+      <div class="painel-oc-lista rolagem-escura" id="ocorrencias-lista"><p class="painel-oc-vazio">Nenhuma ocorrência aberta.</p></div>
+    </section>
+    <button type="button" class="pilula-oc" id="pilula-oc" aria-label="Mostrar a lista de ocorrências" hidden>
+      <span>Ocorrências</span><span class="painel-oc-total" id="pilula-total">0</span><span class="pilula-tempo" id="pilula-tempo"></span>
+      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button type="button" class="aba-painel" id="aba-painel" aria-controls="painel" aria-expanded="true" aria-label="Recolher o painel lateral" title="Recolher o painel lateral">
+      <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+  <aside class="painel-lateral" id="painel">
+    <div class="painel-toggle" data-painel-toggle title="Mostrar/ocultar"></div>
+    <div class="barra-busca">
+      <input type="search" id="busca" placeholder="Buscar local, sigla, cidade, contato ou carro" autocomplete="off" aria-label="Buscar">
+      <button type="button" class="btn sec" id="btn-localizar" title="Minha posição">&#9673;</button>
+    </div>
+    <div class="painel-conteudo" id="painel-conteudo">
+      <div id="tela-inicial">
+        <div class="secao recolhivel" id="secao-camadas">
+          <h3><button type="button" class="recolher" data-recolher="camadas" aria-expanded="true">Camadas</button></h3>
+          <div class="secao-corpo">
+            <label class="camada-item camada-todas"><input type="checkbox" id="camadas-todas" checked><span class="bolinha" style="background:#90A4AE"></span><span>Todas as camadas</span></label>
+            <div id="lista-camadas"></div>
+          </div>
+        </div>
+        <div class="secao recolhivel" id="secao-veiculos">
+          <h3><button type="button" class="recolher" data-recolher="veiculos" aria-expanded="true">Veículos <small class="mudo" id="veiculos-info"></small></button></h3>
+          <div class="secao-corpo">
+            <label class="camada-item"><input type="checkbox" id="veiculos-ligado" checked><span class="bolinha" style="background:#1565C0"></span><span>Mostrar veículos</span><span class="total" id="veiculos-total">0</span></label>
+            <div id="veiculos-empresas"></div>
+            <div class="atualizar-gps">
+              <button type="button" class="btn sec pequeno" id="veiculos-atualizar" title="Relê agora o arquivo de posições do Monitoramento de Rodovias">&#8635; Atualizar agora</button>
+              <small class="mudo" id="veiculos-atualizar-info">Posições capturadas a cada 10 min.</small>
+            </div>
+            <div class="secao recolhivel" id="secao-faixas">
+              <div class="subtitulo-faixas"><button type="button" class="recolher" data-recolher="faixas" aria-expanded="true">Tempo sem GPS</button></div>
+              <div class="secao-corpo" id="veiculos-faixas">
+                <label class="faixa-item"><input type="checkbox" data-faixa="ok" checked><span class="chip-gps gps-ok">GPS ok</span><span class="total" data-total-faixa="ok">0</span></label>
+                <label class="faixa-item"><input type="checkbox" data-faixa="1h" checked><span class="chip-gps gps-1h">1 h sem GPS</span><span class="total" data-total-faixa="1h">0</span></label>
+                <label class="faixa-item"><input type="checkbox" data-faixa="6h" checked><span class="chip-gps gps-6h">6 h sem GPS</span><span class="total" data-total-faixa="6h">0</span></label>
+                <label class="faixa-item"><input type="checkbox" data-faixa="12h" checked><span class="chip-gps gps-12h">12 h sem GPS</span><span class="total" data-total-faixa="12h">0</span></label>
+                <label class="faixa-item"><input type="checkbox" data-faixa="24h" checked><span class="chip-gps gps-24h">24 h sem GPS</span><span class="total" data-total-faixa="24h">0</span></label>
+              </div>
+            </div>
+            <p class="atalhos" id="veiculos-erro" hidden></p>
+          </div>
+        </div>
+        <div class="secao recolhivel" id="filtros-extra">
+          <h3><button type="button" class="recolher" data-recolher="filtros" aria-expanded="true">Filtros</button></h3>
+          <div class="secao-corpo">
+            <div class="grade" style="gap:8px">
+              <select id="filtro-empresa" aria-label="Empresa"><option value="">Todas as empresas</option></select>
+              <select id="filtro-uf" aria-label="UF"><option value="">Todas as UFs</option></select>
+            </div>
+            <p class="atalhos" id="filtros-aviso" hidden></p>
+          </div>
+        </div>
+        <div class="secao">
+          <h3>Dicas</h3>
+          <p class="atalhos">Clique com o botão direito (ou toque e segure) em qualquer ponto do mapa para ver os apoios mais próximos ou buscar mecânicas, borracharias, postos e pedágios no OpenStreetMap. Clique num ônibus com ocorrência para ver os carros candidatos ao socorro. Use o botão &#9673; para usar a sua posição.</p>
+        </div>
+      </div>
+      <div id="tela-resultados" hidden></div>
+      <div id="tela-detalhe" hidden></div>
+    </div>
+  </aside>
+</div>
+
+<dialog id="sobre" class="sobre" aria-labelledby="sobre-titulo">
+  <form method="dialog">
+    <h2 id="sobre-titulo">Sobre esta demonstração</h2>
+    <p>O <strong>Apoio CCO</strong> é um mapa de apoio ao centro de controle operacional de uma empresa de ônibus rodoviários: pontos de apoio e garagens, bilheterias, paradas de refeição, empresas terceiras e regionais, com contatos, a última posição de cada carro, as ocorrências de socorro abertas e uma busca de apoios fora do cadastro no OpenStreetMap.</p>
+    <p>O sistema original é um app Django com login, perfis, cadastro, auditoria e importação de KML, hospedado em nuvem e adequado à LGPD. Esta versão de portfólio é uma página estática (HTML, CSS e JavaScript) publicada no GitHub Pages: o mesmo front-end, com as consultas ao servidor trocadas por arquivos de dados e com a lógica de posições, faixas de GPS, distâncias e previsão de chegada portada para JavaScript.</p>
+    <p><strong>Todos os dados são sintéticos</strong>, gerados por script com seed fixa. A frota (carros, placas e posições) é lida do projeto irmão <a href="https://github.com/danielmvr/monitoramento-rodovias-portifolio" target="_blank" rel="noopener">Monitoramento de Rodovias</a>, também sintético; as ocorrências referem carros dessa mesma frota. Os telefones são fictícios e os botões de WhatsApp ficam desativados. O relógio da página começa no horário do snapshot da frota e avança em tempo real.</p>
+    <p><a href="https://github.com/danielmvr/apoio-cco-portifolio" target="_blank" rel="noopener">Código e documentação no GitHub</a></p>
+    <div class="acoes"><button type="submit" class="btn">Fechar</button></div>
+  </form>
+</dialog>
+
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script src="assets/vendor/markercluster/leaflet.markercluster.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/dados.js"></script>
+<script src="assets/js/mapa.js"></script>
+</body>
+</html>

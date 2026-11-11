@@ -1,0 +1,10 @@
+{
+ "agora": "2026-10-15T15:40:00",
+ "seed": 42,
+ "linhas": 44,
+ "viagens": 225,
+ "carros": 118,
+ "registros_atrasos": 825,
+ "noticias": 80,
+ "aviso": "Todos os dados sao sinteticos."
+}
