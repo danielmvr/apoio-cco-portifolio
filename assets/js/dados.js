@@ -7,6 +7,8 @@
  *   - frota: CSV de últimas posições lido direto do repositório do Monitoramento de Rodovias
  *     (raw.githubusercontent.com), com a cópia em data/frota/ como reserva;
  *   - ocorrências: data/ocorrencias.json, com tempos relativos ao "agora" do snapshot da frota;
+ *   - pontualidade: o arquivo de atrasos do dia do snapshot vem do repositório do Monitoramento (reserva em
+ *     data/frota/), e os 28 dias anteriores de data/pontualidade/; o cálculo fica em pontualidade-motor.js;
  *   - apoios fora do cadastro: Nominatim (OpenStreetMap) consultado pelo navegador, 1 pedido por segundo.
  * O relógio é simulado: começa no "agora" do snapshot e avança em tempo real, para os cronômetros correrem.
  */
@@ -21,7 +23,8 @@ window.ApoioDados = (function () {
   var FORCAR_COOLDOWN_SEG = 30;
   var PREVISAO = { velocidade_kmh: 70, fator_rota: 1.3 };
 
-  var estado = { camadas: [], locais: [], meta: null, ocorrencias: [], frota: null, frotaFonte: "", frotaErro: "", lidoEm: 0, relogio: null };
+  var estado = { camadas: [], locais: [], meta: null, ocorrencias: [], frota: null, frotaFonte: "", frotaErro: "", lidoEm: 0, relogio: null,
+    pont: { indice: null, localidades: null, dias: {}, hoje: null, hojeLidoEm: 0, hojeFonte: "" } };
 
   // ---------------------------------------------------------------- relógio simulado
   function relogio() {
@@ -72,6 +75,7 @@ window.ApoioDados = (function () {
       podeEditar: false, podeAdmin: false, demo: true,
       veiculos: true, veiculosIntervaloMin: VEICULOS_INTERVALO_MIN,
       ocorrencias: true, fluxoUrl: FLUXO_URL, fluxoNome: "Monitoramento de Rodovias", ocorrenciasFonte: "Ocorrências sintéticas",
+      pontualidade: true, urls: { pontualidade: "pontualidade", analise: "pontualidade.html" },
       socorroRaioKm: 200,
       apoiosOsm: true, apoiosOsmCategorias: OSM_CATEGORIAS.map(function (c) { return { id: c.id, rotulo: c.rotulo, cor: c.cor, sigla: c.sigla }; }),
       apoiosOsmRaios: [5, 15, 30, 60], apoiosOsmRaioPadrao: 15,
@@ -287,6 +291,84 @@ window.ApoioDados = (function () {
     });
   }
 
+  // ---------------------------------------------------------------- pontualidade (equivalente a /api/historico/pontualidade/ e /api/historico/analise/)
+  // Dia do snapshot: atrasos.txt do Monitoramento (ao vivo, com reserva local); dias anteriores: data/pontualidade/.
+  var P = function () { return window.Pontualidade; };
+
+  function pontIndice() {
+    var pt = estado.pont;
+    if (pt.indice) return Promise.resolve(pt.indice);
+    return Promise.all([getJson(BASE + "pontualidade/index.json"), getJson(BASE + "localidades.json")]).then(function (r) {
+      pt.indice = r[0]; pt.localidades = r[1].localidades || {}; pt.garagens = r[1].garagens || [];
+      return pt.indice;
+    });
+  }
+
+  function lerDia(dia) {
+    var pt = estado.pont;
+    if (pt.dias[dia]) return pt.dias[dia];
+    pt.dias[dia] = getTexto(BASE + "pontualidade/atrasos_" + dia + ".txt").then(function (t) { return P().lerServicos(t); })
+      .catch(function () { delete pt.dias[dia]; return []; });
+    return pt.dias[dia];
+  }
+
+  // arquivo do dia do snapshot: relido junto com a frota (a cada VEICULOS_INTERVALO_MIN, ou no "Atualizar agora")
+  function lerHoje(forcar) {
+    var pt = estado.pont, agoraReal = Date.now() / 1000;
+    if (pt.hoje && !forcar && agoraReal - pt.hojeLidoEm < VEICULOS_INTERVALO_MIN * 60) return Promise.resolve(pt.hoje);
+    var marca = "?t=" + Date.now();
+    return getTexto(FLUXO_RAW + "atrasos.txt" + marca, { cache: "no-store" }).then(function (t) { pt.hojeFonte = "github"; return t; })
+      .catch(function () { return getTexto(BASE + "frota/atrasos.txt").then(function (t) { pt.hojeFonte = "local"; return t; }); })
+      .then(function (t) { pt.hoje = P().lerServicos(t); pt.hojeLidoEm = agoraReal; return pt.hoje; })
+      .catch(function () { return pt.hoje || []; });
+  }
+
+  // situação de agora de cada carro (cor no mapa e lista "Atrasados agora")
+  function pontualidade(forcar) {
+    return pontIndice().then(function (idx) {
+      var ontem = P().somaDias(idx.hoje, -1);
+      return Promise.all([lerHoje(forcar), idx.dias.indexOf(ontem) >= 0 ? lerDia(ontem) : Promise.resolve([])]);
+    }).then(function (r) {
+      var pt = estado.pont;
+      var d = P().statusAgora(r[0].concat(r[1]), agoraMs(), pt.localidades, pt.garagens);
+      d.fonte = pt.hojeFonte;
+      return d;
+    });
+  }
+
+  function datasPontualidade() {
+    return pontIndice().then(function (idx) { return idx.dias.concat([idx.hoje]); });
+  }
+
+  // análise do período: {de, ate, linha, dia, outliers: "0" para retirar}
+  function analise(params) {
+    return pontIndice().then(function (idx) {
+      var datas = idx.dias.concat([idx.hoje]);
+      var padrao = P().periodoPadrao(datas);
+      var de = params.de || padrao[0], ate = params.ate || padrao[1];
+      if (ate < de) { var t = de; de = ate; ate = t; }
+      if (de < datas[0]) de = datas[0];
+      if (ate > datas[datas.length - 1]) ate = datas[datas.length - 1];
+      var pedidos = datas.filter(function (d) { return d >= de && d <= ate; }).map(function (d) { return d === idx.hoje ? lerHoje(false) : lerDia(d); });
+      return Promise.all(pedidos).then(function (listas) {
+        var servicos = [].concat.apply([], listas);
+        var pt = estado.pont;
+        var d = P().analise(servicos, de, ate, params.linha || null, params.dia || null, agoraMs(), params.outliers === "0", pt.localidades);
+        d.execucao = null;
+        d.linhas_periodo = P().linhasPeriodo(servicos, de, ate);
+        d.datas = datas;
+        return d;
+      });
+    });
+  }
+
+  function pontualidadeConfig() {
+    return pontIndice().then(function (idx) {
+      var datas = idx.dias.concat([idx.hoje]), padrao = P().periodoPadrao(datas);
+      return { urls: { analise: "pontualidade.html" }, datas: datas, de: padrao[0], ate: padrao[1], dias: datas.length, demo: true };
+    });
+  }
+
   // ---------------------------------------------------------------- apoios no OpenStreetMap (equivalente a mapa/osm.py)
   // O Nominatim pede no máximo 1 requisição por segundo: as chamadas são enfileiradas e espaçadas.
   var OSM_CATEGORIAS = [
@@ -396,5 +478,7 @@ window.ApoioDados = (function () {
     });
   }
 
-  return { pronto: pronto, locais: locais, detalhe: detalhe, busca: busca, veiculos: veiculos, apoiosOsm: apoiosOsm, agora: agora, agoraMs: agoraMs, estado: estado };
+  return { pronto: pronto, locais: locais, detalhe: detalhe, busca: busca, veiculos: veiculos, apoiosOsm: apoiosOsm,
+    pontualidade: pontualidade, analise: analise, datasPontualidade: datasPontualidade, pontualidadeConfig: pontualidadeConfig,
+    agora: agora, agoraMs: agoraMs, estado: estado };
 })();

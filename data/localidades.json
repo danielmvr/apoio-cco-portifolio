@@ -1,0 +1,292 @@
+{
+ "localidades": {
+  "RIO": {
+   "nome": "Rio de Janeiro",
+   "cidade": "Rio de Janeiro",
+   "uf": "RJ",
+   "lat": -22.9068,
+   "lon": -43.1729
+  },
+  "PET": {
+   "nome": "Petrópolis",
+   "cidade": "Petrópolis",
+   "uf": "RJ",
+   "lat": -22.505,
+   "lon": -43.1786
+  },
+  "TRR": {
+   "nome": "Três Rios",
+   "cidade": "Três Rios",
+   "uf": "RJ",
+   "lat": -22.1165,
+   "lon": -43.2085
+  },
+  "JDF": {
+   "nome": "Juiz de Fora",
+   "cidade": "Juiz de Fora",
+   "uf": "MG",
+   "lat": -21.7642,
+   "lon": -43.3496
+  },
+  "BAR": {
+   "nome": "Barbacena",
+   "cidade": "Barbacena",
+   "uf": "MG",
+   "lat": -21.2214,
+   "lon": -43.7703
+  },
+  "CLF": {
+   "nome": "Conselheiro Lafaiete",
+   "cidade": "Conselheiro Lafaiete",
+   "uf": "MG",
+   "lat": -20.6603,
+   "lon": -43.7861
+  },
+  "BHZ": {
+   "nome": "Belo Horizonte",
+   "cidade": "Belo Horizonte",
+   "uf": "MG",
+   "lat": -19.9167,
+   "lon": -43.9345
+  },
+  "SET": {
+   "nome": "Sete Lagoas",
+   "cidade": "Sete Lagoas",
+   "uf": "MG",
+   "lat": -19.4658,
+   "lon": -44.2467
+  },
+  "CVL": {
+   "nome": "Curvelo",
+   "cidade": "Curvelo",
+   "uf": "MG",
+   "lat": -18.7561,
+   "lon": -44.4303
+  },
+  "MOC": {
+   "nome": "Montes Claros",
+   "cidade": "Montes Claros",
+   "uf": "MG",
+   "lat": -16.7282,
+   "lon": -43.8578
+  },
+  "VRD": {
+   "nome": "Volta Redonda",
+   "cidade": "Volta Redonda",
+   "uf": "RJ",
+   "lat": -22.5232,
+   "lon": -44.1041
+  },
+  "RES": {
+   "nome": "Resende",
+   "cidade": "Resende",
+   "uf": "RJ",
+   "lat": -22.4686,
+   "lon": -44.4509
+  },
+  "TAU": {
+   "nome": "Taubaté",
+   "cidade": "Taubaté",
+   "uf": "SP",
+   "lat": -23.0264,
+   "lon": -45.5553
+  },
+  "SJC": {
+   "nome": "São José dos Campos",
+   "cidade": "São José dos Campos",
+   "uf": "SP",
+   "lat": -23.1896,
+   "lon": -45.8841
+  },
+  "SPO": {
+   "nome": "São Paulo",
+   "cidade": "São Paulo",
+   "uf": "SP",
+   "lat": -23.5505,
+   "lon": -46.6333
+  },
+  "CAM": {
+   "nome": "Campinas",
+   "cidade": "Campinas",
+   "uf": "SP",
+   "lat": -22.9099,
+   "lon": -47.0626
+  },
+  "RPO": {
+   "nome": "Ribeirão Preto",
+   "cidade": "Ribeirão Preto",
+   "uf": "SP",
+   "lat": -21.1775,
+   "lon": -47.8103
+  },
+  "UBA": {
+   "nome": "Uberaba",
+   "cidade": "Uberaba",
+   "uf": "MG",
+   "lat": -19.7472,
+   "lon": -47.9392
+  },
+  "UDI": {
+   "nome": "Uberlândia",
+   "cidade": "Uberlândia",
+   "uf": "MG",
+   "lat": -18.9186,
+   "lon": -48.2772
+  },
+  "CAT": {
+   "nome": "Catalão",
+   "cidade": "Catalão",
+   "uf": "GO",
+   "lat": -18.1659,
+   "lon": -47.9463
+  },
+  "BSB": {
+   "nome": "Brasília",
+   "cidade": "Brasília",
+   "uf": "DF",
+   "lat": -15.7939,
+   "lon": -47.8828
+  },
+  "ANA": {
+   "nome": "Anápolis",
+   "cidade": "Anápolis",
+   "uf": "GO",
+   "lat": -16.3281,
+   "lon": -48.9534
+  },
+  "GYN": {
+   "nome": "Goiânia",
+   "cidade": "Goiânia",
+   "uf": "GO",
+   "lat": -16.6869,
+   "lon": -49.2648
+  },
+  "RVD": {
+   "nome": "Rio Verde",
+   "cidade": "Rio Verde",
+   "uf": "GO",
+   "lat": -17.7923,
+   "lon": -50.9192
+  },
+  "JTI": {
+   "nome": "Jataí",
+   "cidade": "Jataí",
+   "uf": "GO",
+   "lat": -17.8784,
+   "lon": -51.7204
+  },
+  "LAV": {
+   "nome": "Lavras",
+   "cidade": "Lavras",
+   "uf": "MG",
+   "lat": -21.2453,
+   "lon": -44.9998
+  },
+  "POU": {
+   "nome": "Pouso Alegre",
+   "cidade": "Pouso Alegre",
+   "uf": "MG",
+   "lat": -22.23,
+   "lon": -45.9366
+  },
+  "SSA": {
+   "nome": "Salvador",
+   "cidade": "Salvador",
+   "uf": "BA",
+   "lat": -12.9777,
+   "lon": -38.5016
+  },
+  "FSA": {
+   "nome": "Feira de Santana",
+   "cidade": "Feira de Santana",
+   "uf": "BA",
+   "lat": -12.2664,
+   "lon": -38.9663
+  },
+  "VDC": {
+   "nome": "Vitória da Conquista",
+   "cidade": "Vitória da Conquista",
+   "uf": "BA",
+   "lat": -14.8615,
+   "lon": -40.8442
+  },
+  "REG": {
+   "nome": "Registro",
+   "cidade": "Registro",
+   "uf": "SP",
+   "lat": -24.4872,
+   "lon": -47.8442
+  },
+  "CUR": {
+   "nome": "Curitiba",
+   "cidade": "Curitiba",
+   "uf": "PR",
+   "lat": -25.4284,
+   "lon": -49.2733
+  },
+  "JOI": {
+   "nome": "Joinville",
+   "cidade": "Joinville",
+   "uf": "SC",
+   "lat": -26.3045,
+   "lon": -48.8487
+  },
+  "FLN": {
+   "nome": "Florianópolis",
+   "cidade": "Florianópolis",
+   "uf": "SC",
+   "lat": -27.5954,
+   "lon": -48.548
+  },
+  "RBO": {
+   "nome": "Rio Bonito",
+   "cidade": "Rio Bonito",
+   "uf": "RJ",
+   "lat": -22.7085,
+   "lon": -42.6094
+  },
+  "CBF": {
+   "nome": "Cabo Frio",
+   "cidade": "Cabo Frio",
+   "uf": "RJ",
+   "lat": -22.8894,
+   "lon": -42.0286
+  },
+  "MAC": {
+   "nome": "Macaé",
+   "cidade": "Macaé",
+   "uf": "RJ",
+   "lat": -22.3768,
+   "lon": -41.7869
+  },
+  "CPS": {
+   "nome": "Campos dos Goytacazes",
+   "cidade": "Campos dos Goytacazes",
+   "uf": "RJ",
+   "lat": -21.7545,
+   "lon": -41.3244
+  }
+ },
+ "garagens": [
+  "ANAPOLIS",
+  "BARBACENA",
+  "BELO HORIZONTE",
+  "CABO FRIO",
+  "CATALAO",
+  "CONSELHEIRO LAFAIETE",
+  "CURITIBA",
+  "CURVELO",
+  "FEIRA DE SANTANA",
+  "JUIZ DE FORA",
+  "LAVRAS",
+  "MACAE",
+  "PETROPOLIS",
+  "REGISTRO",
+  "RIO VERDE",
+  "SALVADOR",
+  "SETE LAGOAS",
+  "UBERABA",
+  "UBERLANDIA",
+  "VOLTA REDONDA"
+ ]
+}

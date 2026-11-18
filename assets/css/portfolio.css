@@ -13,3 +13,4 @@
 .sobre::backdrop { background: rgba(16, 32, 56, .45); }
 .sobre p { margin: 0 0 10px; }
 .sobre .acoes { display: flex; justify-content: flex-end; margin-top: 14px; }
+.portfolio .pt-filtros { top: calc(var(--topo-altura) + var(--faixa-altura)); }

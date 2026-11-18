@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Apoio CCO, versão de portfólio: análise de pontualidade por período dos serviços de ônibus rodoviários, com dados sintéticos, em HTML e JavaScript puros.">
+<title>Pontualidade · Apoio CCO demonstração</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css">
+<link rel="stylesheet" href="assets/css/pontualidade.css">
+<link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body class="pont-pagina portfolio">
+<header class="topo">
+  <a class="marca" href="./">
+    <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+    <span>Apoio CCO</span>
+    <span class="versao" title="Versão de portfólio com dados sintéticos">portfólio</span>
+  </a>
+  <button class="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" data-toggle="menu">&#9776;</button>
+  <nav class="menu" id="menu">
+    <a href="./">Mapa</a>
+    <a href="pontualidade.html" class="ativo">Pontualidade</a>
+    <a href="https://danielmvr.github.io/monitoramento-rodovias-portifolio/" target="_blank" rel="noopener" title="Projeto irmão: de lá vêm a frota e as paradas do dia">Monitoramento de Rodovias</a>
+    <a href="https://github.com/danielmvr/apoio-cco-portifolio" target="_blank" rel="noopener">Código</a>
+  </nav>
+</header>
+<div class="faixa-aviso" role="note">
+  <strong>Demonstração com dados sintéticos.</strong> <span class="longo">O dia do snapshot vem do projeto <a href="https://github.com/danielmvr/monitoramento-rodovias-portifolio" target="_blank" rel="noopener">Monitoramento de Rodovias</a>;
+  os 28 dias anteriores são gerados por script, com as mesmas linhas e carros. A análise roda no navegador.</span> <a href="https://github.com/danielmvr/apoio-cco-portifolio#readme" target="_blank" rel="noopener">Saiba mais</a>.
+</div>
+<div class="pt-filtros" role="search" aria-label="Filtros da análise">
+  <div class="pt-filtros-in">
+    <fieldset class="pt-periodo">
+      <legend>Período</legend>
+      <label><span class="vh">De</span><input type="date" id="f-de"></label>
+      <span class="pt-a">a</span>
+      <label><span class="vh">Até</span><input type="date" id="f-ate"></label>
+      <div class="pt-atalhos" role="group" aria-label="Períodos prontos">
+        <button type="button" data-dias="1">Último dia</button>
+        <button type="button" data-dias="7">7 dias</button>
+        <button type="button" data-dias="14">14 dias</button>
+        <button type="button" data-dias="0">Tudo</button>
+      </div>
+    </fieldset>
+    <div class="pt-outliers">
+      <span class="pt-outliers-rot" id="rot-outliers">Valores fora do padrão</span>
+      <div class="pt-atalhos" role="group" aria-labelledby="rot-outliers">
+        <button type="button" data-outliers="manter" aria-pressed="true">Manter</button>
+        <button type="button" data-outliers="retirar" aria-pressed="false" title="Retira, em cada grupo (trecho, linha, dia, hora...), os valores fora de Q1 - 1,5 IQR e Q3 + 1,5 IQR">Retirar outliers</button>
+      </div>
+    </div>
+    <div class="pt-linha">
+      <label for="f-linha">Linha</label>
+      <div class="pt-linha-campo">
+        <input type="search" id="f-linha" list="lista-linhas" placeholder="Todas as linhas: digite o nome, sigla ou código" autocomplete="off">
+        <datalist id="lista-linhas"></datalist>
+        <button type="button" class="btn sec pequeno" id="f-todas" hidden>Todas as linhas</button>
+      </div>
+    </div>
+  </div>
+  <div class="pt-aviso-carga" id="pt-aviso-carga" role="status" hidden><span id="pt-aviso-txt"></span><span id="pt-aviso-seg" aria-hidden="true"></span></div>
+  <div class="pt-progresso" id="pt-progresso" hidden aria-hidden="true"><span></span></div>
+</div>
+
+<main class="pt-pagina" id="pt-conteudo" aria-live="polite">
+  <p class="pt-carregando">Carregando a análise...</p>
+</main>
+<div class="pt-dica" id="pt-dica" role="tooltip" hidden></div>
+
+<script src="assets/vendor/leaflet/leaflet.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pontualidade-motor.js"></script>
+<script src="assets/js/dados.js"></script>
+<script src="assets/js/pontualidade.js"></script>
+</body>
+</html>

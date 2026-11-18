@@ -1,6 +1,6 @@
 /* Mapa principal do Apoio CCO (Leaflet + MarkerCluster, sem outras dependências).
  * Versão de portfólio: as consultas ao servidor foram trocadas pelas funções de ApoioDados (assets/js/dados.js),
- * que leem arquivos estáticos e o CSV de frota do Monitoramento de Rodovias; o resto do código é o do sistema original. */
+ * que leem arquivos estáticos e os dados de frota e atrasos do Monitoramento de Rodovias; o resto do código é o do sistema original. */
 window.ApoioDados.pronto.then(function (CFG) {
   "use strict";
 
@@ -10,8 +10,8 @@ window.ApoioDados.pronto.then(function (CFG) {
 
   // ---------------------------------------------------------------- mapa base
   var mapa = L.map("mapa", { zoomControl: false, preferCanvas: false }).setView(CFG.centro, CFG.zoom);
-  // com o painel de ocorrências flutuando à esquerda, os controles do mapa ficam do lado direito
-  var LADO_CONTROLES = (CFG.veiculos && CFG.ocorrencias) ? "right" : "left";
+  // com os painéis de ocorrências e de atrasados flutuando à esquerda, os controles do mapa ficam do lado direito
+  var LADO_CONTROLES = (CFG.veiculos && (CFG.ocorrencias || CFG.pontualidade)) ? "right" : "left";
   L.control.zoom({ position: "top" + LADO_CONTROLES, zoomInTitle: "Aproximar", zoomOutTitle: "Afastar" }).addTo(mapa);
   var osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19, attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
@@ -55,6 +55,8 @@ window.ApoioDados.pronto.then(function (CFG) {
     if (!p || !pil) return;
     p.hidden = !paineis.oc;
     pil.hidden = paineis.oc;
+    var area = p.parentNode;
+    if (area) area.classList.toggle("oc-aberto", !!paineis.oc);
   }
   (function () {
     var aba = document.getElementById("aba-painel");
@@ -348,9 +350,13 @@ window.ApoioDados.pronto.then(function (CFG) {
   // no celular o painel cobre a metade de baixo: desloca o centro para o ponto ficar visível
   // largura que o painel flutuante de ocorrências cobre na esquerda do mapa (0 se recolhido ou no celular)
   function folgaOc() {
-    var p = document.getElementById("painel-oc");
-    if (!p || p.hidden || window.innerWidth <= 760) return 0;
-    return p.offsetLeft + p.offsetWidth;
+    if (window.innerWidth <= 760) return 0;
+    var f = 0;
+    ["painel-oc", "painel-at"].forEach(function (id) {
+      var p = document.getElementById(id);
+      if (p && !p.hidden) f = Math.max(f, p.offsetLeft + p.offsetWidth);
+    });
+    return f;
   }
 
   // enquadra sem deixar nada embaixo do painel de ocorrências
@@ -653,6 +659,37 @@ window.ApoioDados.pronto.then(function (CFG) {
   var veic = { lista: [], grupo: L.layerGroup(), grupoCand: L.layerGroup(), marcadores: {}, ligado: true, faixasOff: {}, empresasOff: {}, dados: null, ultimaBusca: 0, candidatosDe: null, raioCand: 0 };
   // faixas de tempo sem GPS (calculadas no servidor): ok (< 1 h), 1h, 6h, 12h
   var FAIXAS_GPS = { ok: "GPS ok", "1h": "1 h sem GPS", "6h": "6 h sem GPS", "12h": "12 h sem GPS", "24h": "24 h sem GPS" };
+
+  // ---------------------------------------------------------------- pontualidade dos serviços (arquivo de atrasos)
+  // "Colorir os ônibus por: Pontualidade" pinta cada carro pela faixa de atraso do serviço em andamento (arquivo de atrasos
+  // com detalhe por parada; nesta versão não há execução), escreve "+NN"
+  // acima de 20 min e mostra a lista flutuante "Atrasados agora". Desligado, nada disso é buscado nem desenhado.
+  var FAIXAS_PONT = [
+    { k: "grave", rot: "Atraso acima de 45 min", cor: "#9E1C1C" },
+    { k: "atrasado", rot: "Atraso até 45 min, fora da tolerância", cor: "#D9531A" },
+    { k: "leve", rot: "Saída com 9 a 20 min de atraso", cor: "#D9A90F" },
+    { k: "pontual", rot: "Na tolerância (saída até 8:59, demais paradas até 30 min)", cor: "#2E7D4F" },
+    { k: "adiantado", rot: "Adiantado (mais de 9 min antes)", cor: "#3B6FB6" },
+    { k: "escala", rot: "Na escala, sem horário registrado", cor: "#3F4752" },
+    { k: "garagem", rot: "Na garagem, sem serviço", cor: "#8B7355" },
+    { k: "sem", rot: "Sem serviço, fora da garagem", cor: "#A9B3BE" }
+  ];
+  var COR_PONT = {};
+  FAIXAS_PONT.forEach(function (f) { COR_PONT[f.k] = f.cor; });
+  var PONT_CHAVE = "apoiocco.pontualidade";
+  var pont = { ligado: false, dados: null, faixasOff: {}, rotulos: true, painel: window.innerWidth > 760, erro: "" };
+  try {
+    var salvoPont = JSON.parse(localStorage.getItem(PONT_CHAVE) || "null");
+    if (salvoPont) {
+      pont.ligado = !!salvoPont.ligado;
+      pont.faixasOff = salvoPont.faixasOff || {};
+      if (typeof salvoPont.rotulos === "boolean") pont.rotulos = salvoPont.rotulos;
+      if (typeof salvoPont.painel === "boolean") pont.painel = salvoPont.painel;
+    }
+  } catch (e) {}
+  function guardarPont() {
+    try { localStorage.setItem(PONT_CHAVE, JSON.stringify({ ligado: pont.ligado, faixasOff: pont.faixasOff, rotulos: pont.rotulos, painel: pont.painel })); } catch (e) {}
+  }
   if (CFG.veiculos) {
     veic.grupo.addTo(mapa);
     veic.grupoCand.addTo(mapa);
@@ -683,6 +720,7 @@ window.ApoioDados.pronto.then(function (CFG) {
       it.classList.toggle("desligado", !!veic.empresasOff[e]);
       desenharVeiculos();
     });
+    iniciarPontualidade();
     carregarVeiculos();
     // a cada 1 minuto, mesmo com a aba em segundo plano ou a janela coberta: posições (relidas no servidor a cada
     // VEICULOS_INTERVALO_MIN) e ocorrências (a cada 1 min). O navegador reduz o ritmo em abas escondidas, por isso
@@ -734,7 +772,7 @@ window.ApoioDados.pronto.then(function (CFG) {
 
   var COR_SOCORRO = "#0097A7";
 
-  function iconeOnibus(cor, faixa, oc, soc) {
+  function iconeOnibus(cor, faixa, oc, soc, atr) {
     // silhueta lateral do ônibus na cor da empresa; com 12 h ou mais sem GPS fica cinza com o contorno na cor da empresa
     // com ocorrência aberta: contorno vermelho, radar pulsando, selo "!" e etiqueta com o status
     // carro que segue para um socorro: contorno azul-petróleo e etiqueta "Socorro -> carro"
@@ -747,8 +785,9 @@ window.ApoioDados.pronto.then(function (CFG) {
       "<circle cx='8.5' cy='16' r='2.4' fill='#37474F' stroke='#fff' stroke-width='1'/><circle cx='25.5' cy='16' r='2.4' fill='#37474F' stroke='#fff' stroke-width='1'/></svg>";
     var extra = oc ? "<span class='selo-oc'>!</span><span class='rotulo-oc'>" + esc(oc.status_rotulo) + (oc.minutos != null ? " · " + minutosTexto(oc.minutos) : "") + "</span>" : "";
     if (!oc && soc) extra = "<span class='rotulo-soc'>SOS &rarr; " + esc(soc.carro) + (soc.dist_km != null ? " - " + kmTexto(soc.dist_km) : "") + (soc.prev_min != null ? " (Prev. " + prevTexto(soc.prev_min) + ")" : "") + "</span>";
+    if (!oc && !soc && atr) extra = "<span class='rotulo-at' style='background:" + atr.cor + "'>" + atrasoCurto(atr.min) + "</span>";
     var classes = "marcador-onibus" + (oc ? " com-ocorrencia" : "") + (soc ? " com-socorro" : "") + (faixa === "24h" ? " gps-24h" : "");
-    return L.divIcon({ html: "<div class='" + classes + "'>" + extra + svg + etiquetaGps(faixa) + "</div>", className: "", iconSize: [34, 20], iconAnchor: [17, 10], tooltipAnchor: [0, (oc || soc) ? -30 : -12] });
+    return L.divIcon({ html: "<div class='" + classes + "'>" + extra + svg + etiquetaGps(faixa) + "</div>", className: "", iconSize: [34, 20], iconAnchor: [17, 10], tooltipAnchor: [0, (oc || soc || atr) ? -30 : -12] });
   }
 
   function prevTexto(min) {
@@ -778,6 +817,7 @@ window.ApoioDados.pronto.then(function (CFG) {
       "<div class='tt-sub'>" + esc(v.empresa || "sem empresa") + (v.nop ? " · " + esc(v.nop) : "") + "</div>" +
       "<div class='tt-gps'>" + chipGps(v.faixa) + " <span class='mudo'>" + (v.quando ? "última posição " + esc(v.quando) + " (" + idadeTexto(v.idade_min) + ")" : "sem data da posição") + "</span></div>" +
       (v.ocorrencia ? "<div class='tt-oc'>" + chipOcorrencia(v.ocorrencia) + " <span class='mudo'>ocorrência há " + minutosTexto(v.ocorrencia.minutos) + (v.ocorrencia.local_socorro ? " · " + esc(v.ocorrencia.local_socorro) : "") + (v.ocorrencia.segue ? " · carro que segue: " + esc(v.ocorrencia.segue.carro) + (v.ocorrencia.segue.dist_km != null ? " (a " + kmTexto(v.ocorrencia.segue.dist_km) + ")" : "") : "") + "</span></div>" : "") +
+      tooltipPont(v) +
       (v.socorro ? "<div class='tt-oc'>" + chipSocorro("SOS") + " <span class='mudo'>a caminho do carro " + esc(v.socorro.carro) + (v.socorro.dist_km != null ? " (a " + kmTexto(v.socorro.dist_km) + (v.socorro.prev_min != null ? ", prev. " + prevTexto(v.socorro.prev_min) : "") + ")" : "") + (v.socorro.local_socorro ? " · " + esc(v.socorro.local_socorro) : "") + "</span></div>" : "");
   }
 
@@ -800,6 +840,7 @@ window.ApoioDados.pronto.then(function (CFG) {
     veic.ultimaBusca = Date.now();
     window.ApoioDados.veiculos(forcar).then(function (d) {
       if (d) {
+        if (pont.ligado) carregarPontualidade(forcar);
         veic.dados = d;
         veic.lista = d.veiculos || [];
         veic.ocorrencias = (d.ocorrencias && d.ocorrencias.lista) || [];
@@ -835,7 +876,206 @@ window.ApoioDados.pronto.then(function (CFG) {
     if (v.ocorrencia || v.socorro) return true;  // carro com ocorrência aberta ou a caminho de socorro aparece sempre, mesmo com filtros desligados
     if (veic.empresasOff[v.empresa]) return false;
     if (veic.faixasOff[v.faixa || "ok"]) return false;
+    if (pont.ligado && pont.dados && pont.faixasOff[faixaPont(v)]) return false;
     return true;
+  }
+
+
+  // ---------------------------------------------------------------- pontualidade: controles, dados e lista "Atrasados agora"
+  function pontDe(v) { return pont.dados && pont.dados.veiculos ? pont.dados.veiculos[v.id] || null : null; }
+  // sem serviço: separa quem está a até 1 km de uma garagem do cadastro (localidade com GARAGEM no nome)
+  var GARAGEM_KM = 1;
+  function naGaragem(v) {
+    var g = pont.dados && pont.dados.garagens;
+    return !!(g && v.local_proximo && v.dist_km != null && v.dist_km <= GARAGEM_KM && g.indexOf(v.local_proximo) >= 0);
+  }
+  function faixaPont(v) {
+    var p = pontDe(v);
+    if (p && p.faixa !== "sem") return p.faixa;
+    return naGaragem(v) ? "garagem" : "sem";
+  }
+  function horaMs(ms) {
+    if (ms == null) return "";
+    var d = new Date(ms);
+    return (d.getHours() < 10 ? "0" : "") + d.getHours() + ":" + (d.getMinutes() < 10 ? "0" : "") + d.getMinutes();
+  }
+  // atraso a partir de 60 min em horas e minutos: 75 -> "1h15m", 120 -> "2h"
+  function horasMin(min) {
+    var m = Math.round(Math.abs(min)), h = Math.floor(m / 60), r = m % 60;
+    return h + "h" + (r ? (r < 10 ? "0" : "") + r + "m" : "");
+  }
+  function atrasoCurto(min) {
+    return (min < 0 ? "−" : "+") + (Math.abs(min) >= 60 ? horasMin(min) : Math.abs(Math.round(min)));
+  }
+  function atrasoTexto(min) {
+    if (min == null) return "sem registro";
+    if (min === 0) return "no horário";
+    return (min > 0 ? "+" : "−") + (Math.abs(min) >= 60 ? horasMin(min) : Math.abs(min) + " min");
+  }
+  function chipPont(sp, faixaV) {
+    var f = faixaV || (sp ? sp.faixa : "sem");
+    var t = f === "garagem" ? "na garagem" : !sp || f === "sem" ? "sem serviço" : f === "escala" ? "sem horário" : atrasoTexto(sp.atraso);
+    return "<span class='chip-pont' style='background:" + COR_PONT[f] + "'>" + esc(t) + "</span>";
+  }
+  function paradaTexto(p) { return p ? esc(p.sigla) + (p.nome ? " (" + esc(p.nome) + ")" : "") : ""; }
+  function servicoTexto(sp) { return esc(sp.descricao || sp.linha || sp.servico || "") + (sp.tipo && sp.tipo !== "Normal" ? " · " + esc(sp.tipo) : ""); }
+  function proximoTexto(px) {
+    return px ? "próximo serviço: " + esc(px.descricao || px.linha || px.servico) + (px.tipo && px.tipo !== "Normal" ? " (" + esc(px.tipo) + ")" : "") +
+      ", sai de " + esc(px.origem.sigla) + " às " + horaMs(px.origem.prog) : "";
+  }
+  // uma linha sobre onde o carro está no serviço
+  function situacaoPontTexto(sp) {
+    if (sp.faixa === "escala") return "na escala: " + esc(sp.proxima.sigla) + " → " + esc(sp.destino.sigla) + ", " + horaMs(sp.proxima.prog) + " a " + horaMs(sp.destino.prog) + ", sem registro de saída";
+    if (sp.saida_atrasada && sp.proxima) return "ainda não saiu de " + esc(sp.proxima.sigla) + ", saída prevista " + horaMs(sp.proxima.prog);
+    if (sp.fonte === "execucao") {
+      return "saiu de " + esc(sp.ultima.sigla) + " às " + horaMs(sp.ultima.real) + (sp.proxima ? (sp.provisorio ? ", ainda não chegou em " : ", chegada em ") + esc(sp.proxima.sigla) + " prevista " + horaMs(sp.proxima.prog) : "");
+    }
+    if (sp.provisorio && sp.proxima) return "ainda não chegou em " + esc(sp.proxima.sigla) + ", prevista " + horaMs(sp.proxima.prog);
+    if (sp.proxima) return "próxima " + esc(sp.proxima.sigla) + ", prevista " + horaMs(sp.proxima.prog);
+    return sp.ultima ? "saiu de " + esc(sp.ultima.sigla) + " às " + horaMs(sp.ultima.real) : "";
+  }
+  function tooltipPont(v) {
+    if (!pont.ligado || !pont.dados) return "";
+    var sp = pontDe(v), f = faixaPont(v);
+    if (f === "sem" || f === "garagem") return "<div class='tt-pont'>" + chipPont(sp, f) + " <span class='mudo'>" + (f === "garagem" ? esc(v.local_proximo) + " · " : "") + (sp && sp.proximo_servico ? proximoTexto(sp.proximo_servico) : "sem serviço em andamento nem próximo na escala") + "</span></div>";
+    return "<div class='tt-pont'>" + chipPont(sp) + " <strong>" + servicoTexto(sp) + "</strong><br><span class='mudo'>" + situacaoPontTexto(sp) + "</span></div>";
+  }
+  var FONTE_PONT = { atrasos: "atrasos por parada", execucao: "execução (trecho)", escala: "escala da execução" };
+  function blocoPont(v) {
+    if (!pont.ligado || !pont.dados) return "";
+    var sp = pontDe(v), px = sp && sp.proximo_servico, fv = faixaPont(v);
+    var blocoProx = px ? linhaInfo(sp && px.servico === sp.servico ? "Próximo trecho" : "Próximo serviço", servicoTexto(px) + "<br>" + paradaTexto(px.origem) + " às " + horaMs(px.origem.prog) + (px.destino && px.destino.sigla ? " → " + paradaTexto(px.destino) + (px.destino.prog ? " às " + horaMs(px.destino.prog) : "") : ""), true) : "";
+    if (fv === "sem" || fv === "garagem") return "<div class='secao'><h3>Serviço</h3><div style='margin:4px 0 8px'>" + chipPont(sp, fv) + "</div><p class='mudo' style='margin:4px 0'>" +
+      (fv === "garagem" ? "Na garagem " + esc(v.local_proximo) + " (" + kmTexto(v.dist_km) + "), sem serviço em andamento." : "Sem serviço em andamento no arquivo de atrasos.") + "</p>" + blocoProx + "</div>";
+    var u = sp.ultima, pr = sp.proxima, h = "";
+    var nota = sp.faixa === "escala" ? "o carro está escalado neste trecho, mas a saída não foi registrada" :
+      sp.saida_atrasada ? "provisório, conta desde a saída prevista" :
+      sp.provisorio ? (sp.fonte === "execucao" ? "provisório, conta desde a chegada prevista do trecho" : "provisório, conta desde a hora prevista da próxima parada") : "";
+    h += "<div style='margin:4px 0 8px'>" + chipPont(sp) + (nota ? " <span class='mudo'>" + nota + "</span>" : "") + "</div>";
+    h += linhaInfo("Linha", servicoTexto(sp), true) + linhaInfo("Serviço", sp.servico);
+    if (sp.faixa === "escala") {
+      h += linhaInfo("Trecho", paradaTexto(pr) + " às " + horaMs(pr.prog) + " → " + paradaTexto(sp.destino) + " às " + horaMs(sp.destino.prog), true);
+    } else if (sp.fonte === "execucao") {
+      h += linhaInfo("Saída", paradaTexto(u) + " · prevista " + horaMs(u.prog) + ", realizada " + horaMs(u.real) + esc(u.atraso == null ? "" : " (" + atrasoTexto(u.atraso) + ")"), true);
+      if (pr) h += linhaInfo("Chegada", paradaTexto(pr) + " · prevista " + horaMs(pr.prog), true);
+    } else {
+      if (u) h += linhaInfo("Última parada", paradaTexto(u) + " · prevista " + horaMs(u.prog) + ", registrada " + horaMs(u.real) + esc(u.atraso == null ? "" : " (" + atrasoTexto(u.atraso) + ")"), true);
+      if (pr) h += linhaInfo(u ? "Próxima" : "Saída", paradaTexto(pr) + " · prevista " + horaMs(pr.prog), true);
+      if (sp.destino) h += linhaInfo("Destino", paradaTexto(sp.destino) + " · previsto " + horaMs(sp.destino.prog), true);
+      if (sp.total) h += linhaInfo("Paradas", sp.feitas + " de " + sp.total + " registradas");
+    }
+    h += linhaInfo("Fonte", FONTE_PONT[sp.fonte] || "") + blocoProx;
+    if (sp.linha) h += "<p style='margin:6px 0 0'><a href='" + CFG.urls.analise + "?linha=" + encodeURIComponent(sp.linha) + "'>Ver a linha na análise de pontualidade</a></p>";
+    return "<div class='secao'><h3>Serviço</h3>" + h + "</div>";
+  }
+
+  function iniciarPontualidade() {
+    var botoes = $$("[data-cor-por]");
+    if (!botoes.length) return;
+    botoes.forEach(function (b) {
+      b.addEventListener("click", function () { ligarPont(b.getAttribute("data-cor-por") === "pontualidade"); });
+    });
+    var cont = $("#pont-faixas");
+    cont.innerHTML = FAIXAS_PONT.map(function (f) {
+      return "<label class='faixa-item'><input type='checkbox' data-pfaixa='" + f.k + "'" + (pont.faixasOff[f.k] ? "" : " checked") + ">" +
+        "<span class='amostra-pont' style='background:" + f.cor + "'></span><span class='pont-rot'>" + f.rot + "</span><span class='total' data-total-pont='" + f.k + "'>0</span></label>";
+    }).join("");
+    cont.addEventListener("change", function (ev) {
+      var cb = ev.target.closest("[data-pfaixa]");
+      if (!cb) return;
+      pont.faixasOff[cb.getAttribute("data-pfaixa")] = !cb.checked;
+      guardarPont();
+      desenharVeiculos();
+    });
+    var rot = $("#pont-rotulos");
+    rot.checked = pont.rotulos;
+    rot.addEventListener("change", function () { pont.rotulos = rot.checked; guardarPont(); desenharVeiculos(); });
+    var rec = $("#at-recolher"), pil = $("#pilula-at");
+    if (rec) rec.addEventListener("click", function () { pont.painel = false; guardarPont(); aplicarPainelAt(); if (pil) pil.focus(); });
+    if (pil) pil.addEventListener("click", function () { pont.painel = true; guardarPont(); aplicarPainelAt(); if (rec) rec.focus(); });
+    var lista = $("#at-lista");
+    if (lista) lista.addEventListener("click", function (ev) {
+      var it = ev.target.closest("[data-carro]");
+      if (!it) return;
+      var id = it.getAttribute("data-carro");
+      var v = veic.lista.filter(function (x) { return x.id === id; })[0];
+      if (v) abrirVeiculo(v); else avisar("O carro " + id + " não tem posição de GPS no arquivo de hoje.");
+    });
+    if (lista) lista.addEventListener("keydown", function (ev) {
+      if ((ev.key === "Enter" || ev.key === " ") && ev.target.hasAttribute && ev.target.hasAttribute("data-carro")) { ev.preventDefault(); ev.target.click(); }
+    });
+    ligarPont(pont.ligado, true);
+  }
+
+  function ligarPont(ligado, inicio) {
+    pont.ligado = ligado;
+    if (!inicio) guardarPont();
+    $$("[data-cor-por]").forEach(function (b) { b.setAttribute("aria-pressed", (b.getAttribute("data-cor-por") === "pontualidade") === ligado ? "true" : "false"); });
+    var op = $("#pont-opcoes");
+    if (op) op.hidden = !ligado;
+    aplicarPainelAt();
+    if (ligado) carregarPontualidade(); else if (!inicio) desenharVeiculos();
+  }
+
+  function aplicarPainelAt() {
+    var p = $("#painel-at"), pil = $("#pilula-at");
+    if (!p) return;
+    var mostrar = pont.ligado && !!pont.dados;
+    p.hidden = !(mostrar && pont.painel);
+    pil.hidden = !(mostrar && !pont.painel);
+    p.parentNode.classList.toggle("com-atrasos", mostrar && pont.painel);
+  }
+
+  var pontBuscando = false;
+  function carregarPontualidade(forcar) {
+    if (pontBuscando || !CFG.urls.pontualidade) return;
+    pontBuscando = true;
+    window.ApoioDados.pontualidade(forcar).then(function (d) {
+      pontBuscando = false;
+      if (!d) { pont.erro = "Não foi possível ler os atrasos agora."; return; }
+      pont.erro = "";
+      pont.dados = d;
+      if (!pont.ligado) return;
+      aplicarPainelAt();
+      montarAtrasados();
+      desenharVeiculos();
+    }).catch(function () { pontBuscando = false; pont.erro = "Não foi possível ler os atrasos agora."; });
+  }
+
+  function contarPont() {
+    if (!pont.ligado || !pont.dados) return;
+    var c = {};
+    FAIXAS_PONT.forEach(function (f) { c[f.k] = 0; });
+    veic.lista.forEach(function (v) {
+      if (veic.empresasOff[v.empresa] || veic.faixasOff[v.faixa || "ok"]) return;
+      c[faixaPont(v)]++;
+    });
+    Object.keys(c).forEach(function (k) { var el = $("[data-total-pont='" + k + "']"); if (el) el.textContent = c[k]; });
+  }
+
+  function montarAtrasados() {
+    var lista = $("#at-lista");
+    if (!lista || !pont.dados) return;
+    var d = pont.dados, porId = {};
+    veic.lista.forEach(function (v) { porId[v.id] = v; });
+    var itens = (d.ranking || []).filter(function (id) {
+      var sp = d.veiculos[id], v = porId[id];
+      return sp && sp.atraso > sp.tol && !(v && veic.empresasOff[v.empresa]);
+    });
+    var graves = itens.filter(function (id) { return d.veiculos[id].atraso > 45; }).length;
+    $("#at-graves").textContent = graves;
+    $("#at-graves").title = graves + " serviço(s) com atraso acima de 45 min";
+    var pt = $("#pilula-at-total");
+    if (pt) pt.textContent = graves;
+    $("#at-info").textContent = itens.length + " com atraso · atualizado às " + horaMs(d.agora);
+    if (!itens.length) { lista.innerHTML = "<li class='painel-oc-vazio'>Nenhum serviço em andamento com atraso acima da tolerância.</li>"; return; }
+    lista.innerHTML = itens.slice(0, 40).map(function (id) {
+      var sp = d.veiculos[id];
+      return "<li class='at-item' tabindex='0' role='button' data-carro='" + esc(id) + "'>" +
+        "<span class='at-linha'>" + servicoTexto(sp) + "</span>" +
+        "<span class='at-min'><span class='at-marca' style='background:" + COR_PONT[sp.faixa] + "'></span>" + atrasoCurto(sp.atraso) + "</span>" +
+        "<span class='at-sub'>carro " + esc(id) + (porId[id] ? "" : " (sem GPS)") + " · " + situacaoPontTexto(sp) + "</span></li>";
+    }).join("") + (itens.length > 40 ? "<li class='painel-oc-vazio'>e mais " + (itens.length - 40) + " serviços com atraso.</li>" : "");
   }
 
   // ---------------------------------------------------------------- ocorrências: cards no painel flutuante
@@ -944,7 +1184,14 @@ window.ApoioDados.pronto.then(function (CFG) {
     veic.lista.forEach(function (v) {
       porFaixa[v.faixa || "ok"] = (porFaixa[v.faixa || "ok"] || 0) + 1;
       if (!veiculoVisivel(v)) return;
-      var m = L.marker([v.lat, v.lon], { icon: iconeOnibus(v.cor, v.faixa, v.ocorrencia, v.socorro), zIndexOffset: v.ocorrencia ? 1000 : (v.socorro ? 900 : 500), riseOnHover: true });
+      var corV = v.cor, atr = null, z = v.ocorrencia ? 1000 : (v.socorro ? 900 : 500);
+      if (pont.ligado && pont.dados) {
+        var sp = pontDe(v), fp = faixaPont(v);
+        corV = COR_PONT[fp];
+        // escreve o atraso só de quem passou da tolerância e de 20 min (faixas atrasado e grave)
+        if (pont.rotulos && sp && sp.atraso > 20 && (fp === "atrasado" || fp === "grave")) { atr = { min: sp.atraso, cor: COR_PONT[fp] }; z = Math.max(z, 600 + Math.min(sp.atraso, 299)); }
+      }
+      var m = L.marker([v.lat, v.lon], { icon: iconeOnibus(corV, v.faixa, v.ocorrencia, v.socorro, atr), zIndexOffset: z, riseOnHover: true });
       m.bindTooltip(tooltipVeiculo(v), { direction: "top", className: "tooltip-veiculo", opacity: 1 });
       m.on("click", function () { abrirVeiculo(v); });
       veic.grupo.addLayer(m);
@@ -963,6 +1210,8 @@ window.ApoioDados.pronto.then(function (CFG) {
     var tot = $("#veiculos-total");
     if (tot) tot.textContent = n;
     Object.keys(porFaixa).forEach(function (f) { var el = $("[data-total-faixa='" + f + "']"); if (el) el.textContent = porFaixa[f]; });
+    contarPont();
+    if (pont.ligado) montarAtrasados();
   }
 
   function idadeTexto(min) {
@@ -978,7 +1227,7 @@ window.ApoioDados.pronto.then(function (CFG) {
     var h = "<div class='detalhe-cabecalho'><button type='button' class='btn-voltar' data-voltar title='Voltar'>&#8592;</button>" +
       "<h2>Veículo " + esc(v.id) + (v.placa ? " <span class='mudo'>" + esc(v.placa) + "</span>" : "") + "</h2></div>" +
       "<div style='margin:4px 0 10px'><span class='etiqueta' style='background:" + esc(v.cor) + "'>" + esc(v.empresa || "sem empresa") + "</span> " + chipGps(v.faixa) + (v.ocorrencia ? " " + chipOcorrencia(v.ocorrencia) : "") + (v.socorro ? " " + chipSocorro("A caminho de socorro") : "") + "</div>" +
-      (v.ocorrencia ? blocoOcorrencia(v.ocorrencia) : "") + (cand ? blocoCandidatos(cand) : "") + (v.socorro ? blocoSocorro(v.socorro) : "") +
+      (v.ocorrencia ? blocoOcorrencia(v.ocorrencia) : "") + (cand ? blocoCandidatos(cand) : "") + (v.socorro ? blocoSocorro(v.socorro) : "") + blocoPont(v) +
       "<div class='secao'><h3>Última posição</h3>" +
       linhaInfo("Quando", v.quando ? v.quando + " (" + idadeTexto(v.idade_min) + ")" : "") +
       linhaInfo("Operação", v.nop) + linhaInfo("Frota", v.frota) + linhaInfo("UF", v.uf) +

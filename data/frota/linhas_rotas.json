@@ -1,0 +1,1294 @@
+[
+ {
+  "codigo": "L101",
+  "desc": "L101 - RIO X JDF",
+  "label": "RIOxJDF",
+  "stops": [
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ],
+   [
+    "PET",
+    "PETROPOLIS",
+    -22.505,
+    -43.1786
+   ],
+   [
+    "TRR",
+    "TRES RIOS",
+    -22.1165,
+    -43.2085
+   ],
+   [
+    "JDF",
+    "JUIZ DE FORA",
+    -21.7642,
+    -43.3496
+   ]
+  ]
+ },
+ {
+  "codigo": "L102",
+  "desc": "L102 - JDF X RIO",
+  "label": "JDFxRIO",
+  "stops": [
+   [
+    "JDF",
+    "JUIZ DE FORA",
+    -21.7642,
+    -43.3496
+   ],
+   [
+    "TRR",
+    "TRES RIOS",
+    -22.1165,
+    -43.2085
+   ],
+   [
+    "PET",
+    "PETROPOLIS",
+    -22.505,
+    -43.1786
+   ],
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ]
+  ]
+ },
+ {
+  "codigo": "L103",
+  "desc": "L103 - RIO X BHZ",
+  "label": "RIOxBHZ",
+  "stops": [
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ],
+   [
+    "PET",
+    "PETROPOLIS",
+    -22.505,
+    -43.1786
+   ],
+   [
+    "JDF",
+    "JUIZ DE FORA",
+    -21.7642,
+    -43.3496
+   ],
+   [
+    "BAR",
+    "BARBACENA",
+    -21.2214,
+    -43.7703
+   ],
+   [
+    "CLF",
+    "CONSELHEIRO LAFAIETE",
+    -20.6603,
+    -43.7861
+   ],
+   [
+    "BHZ",
+    "BELO HORIZONTE",
+    -19.9167,
+    -43.9345
+   ]
+  ]
+ },
+ {
+  "codigo": "L104",
+  "desc": "L104 - BHZ X RIO",
+  "label": "BHZxRIO",
+  "stops": [
+   [
+    "BHZ",
+    "BELO HORIZONTE",
+    -19.9167,
+    -43.9345
+   ],
+   [
+    "CLF",
+    "CONSELHEIRO LAFAIETE",
+    -20.6603,
+    -43.7861
+   ],
+   [
+    "BAR",
+    "BARBACENA",
+    -21.2214,
+    -43.7703
+   ],
+   [
+    "JDF",
+    "JUIZ DE FORA",
+    -21.7642,
+    -43.3496
+   ],
+   [
+    "PET",
+    "PETROPOLIS",
+    -22.505,
+    -43.1786
+   ],
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ]
+  ]
+ },
+ {
+  "codigo": "L105",
+  "desc": "L105 - JDF X BHZ",
+  "label": "JDFxBHZ",
+  "stops": [
+   [
+    "JDF",
+    "JUIZ DE FORA",
+    -21.7642,
+    -43.3496
+   ],
+   [
+    "BAR",
+    "BARBACENA",
+    -21.2214,
+    -43.7703
+   ],
+   [
+    "CLF",
+    "CONSELHEIRO LAFAIETE",
+    -20.6603,
+    -43.7861
+   ],
+   [
+    "BHZ",
+    "BELO HORIZONTE",
+    -19.9167,
+    -43.9345
+   ]
+  ]
+ },
+ {
+  "codigo": "L106",
+  "desc": "L106 - BHZ X JDF",
+  "label": "BHZxJDF",
+  "stops": [
+   [
+    "BHZ",
+    "BELO HORIZONTE",
+    -19.9167,
+    -43.9345
+   ],
+   [
+    "CLF",
+    "CONSELHEIRO LAFAIETE",
+    -20.6603,
+    -43.7861
+   ],
+   [
+    "BAR",
+    "BARBACENA",
+    -21.2214,
+    -43.7703
+   ],
+   [
+    "JDF",
+    "JUIZ DE FORA",
+    -21.7642,
+    -43.3496
+   ]
+  ]
+ },
+ {
+  "codigo": "L107",
+  "desc": "L107 - RIO X RES",
+  "label": "RIOxRES",
+  "stops": [
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ],
+   [
+    "VRD",
+    "VOLTA REDONDA",
+    -22.5232,
+    -44.1041
+   ],
+   [
+    "RES",
+    "RESENDE",
+    -22.4686,
+    -44.4509
+   ]
+  ]
+ },
+ {
+  "codigo": "L108",
+  "desc": "L108 - RES X RIO",
+  "label": "RESxRIO",
+  "stops": [
+   [
+    "RES",
+    "RESENDE",
+    -22.4686,
+    -44.4509
+   ],
+   [
+    "VRD",
+    "VOLTA REDONDA",
+    -22.5232,
+    -44.1041
+   ],
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ]
+  ]
+ },
+ {
+  "codigo": "L109",
+  "desc": "L109 - RIO X SPO",
+  "label": "RIOxSPO",
+  "stops": [
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ],
+   [
+    "VRD",
+    "VOLTA REDONDA",
+    -22.5232,
+    -44.1041
+   ],
+   [
+    "RES",
+    "RESENDE",
+    -22.4686,
+    -44.4509
+   ],
+   [
+    "TAU",
+    "TAUBATE",
+    -23.0264,
+    -45.5553
+   ],
+   [
+    "SJC",
+    "SAO JOSE DOS CAMPOS",
+    -23.1896,
+    -45.8841
+   ],
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ]
+  ]
+ },
+ {
+  "codigo": "L110",
+  "desc": "L110 - SPO X RIO",
+  "label": "SPOxRIO",
+  "stops": [
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ],
+   [
+    "SJC",
+    "SAO JOSE DOS CAMPOS",
+    -23.1896,
+    -45.8841
+   ],
+   [
+    "TAU",
+    "TAUBATE",
+    -23.0264,
+    -45.5553
+   ],
+   [
+    "RES",
+    "RESENDE",
+    -22.4686,
+    -44.4509
+   ],
+   [
+    "VRD",
+    "VOLTA REDONDA",
+    -22.5232,
+    -44.1041
+   ],
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ]
+  ]
+ },
+ {
+  "codigo": "L111",
+  "desc": "L111 - RIO X SPO",
+  "label": "RIOxSPO",
+  "stops": [
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ],
+   [
+    "RES",
+    "RESENDE",
+    -22.4686,
+    -44.4509
+   ],
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ]
+  ]
+ },
+ {
+  "codigo": "L112",
+  "desc": "L112 - SPO X RIO",
+  "label": "SPOxRIO",
+  "stops": [
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ],
+   [
+    "RES",
+    "RESENDE",
+    -22.4686,
+    -44.4509
+   ],
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ]
+  ]
+ },
+ {
+  "codigo": "L113",
+  "desc": "L113 - BHZ X SPO",
+  "label": "BHZxSPO",
+  "stops": [
+   [
+    "BHZ",
+    "BELO HORIZONTE",
+    -19.9167,
+    -43.9345
+   ],
+   [
+    "LAV",
+    "LAVRAS",
+    -21.2453,
+    -44.9998
+   ],
+   [
+    "POU",
+    "POUSO ALEGRE",
+    -22.23,
+    -45.9366
+   ],
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ]
+  ]
+ },
+ {
+  "codigo": "L114",
+  "desc": "L114 - SPO X BHZ",
+  "label": "SPOxBHZ",
+  "stops": [
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ],
+   [
+    "POU",
+    "POUSO ALEGRE",
+    -22.23,
+    -45.9366
+   ],
+   [
+    "LAV",
+    "LAVRAS",
+    -21.2453,
+    -44.9998
+   ],
+   [
+    "BHZ",
+    "BELO HORIZONTE",
+    -19.9167,
+    -43.9345
+   ]
+  ]
+ },
+ {
+  "codigo": "L115",
+  "desc": "L115 - BHZ X MOC",
+  "label": "BHZxMOC",
+  "stops": [
+   [
+    "BHZ",
+    "BELO HORIZONTE",
+    -19.9167,
+    -43.9345
+   ],
+   [
+    "SET",
+    "SETE LAGOAS",
+    -19.4658,
+    -44.2467
+   ],
+   [
+    "CVL",
+    "CURVELO",
+    -18.7561,
+    -44.4303
+   ],
+   [
+    "MOC",
+    "MONTES CLAROS",
+    -16.7282,
+    -43.8578
+   ]
+  ]
+ },
+ {
+  "codigo": "L116",
+  "desc": "L116 - MOC X BHZ",
+  "label": "MOCxBHZ",
+  "stops": [
+   [
+    "MOC",
+    "MONTES CLAROS",
+    -16.7282,
+    -43.8578
+   ],
+   [
+    "CVL",
+    "CURVELO",
+    -18.7561,
+    -44.4303
+   ],
+   [
+    "SET",
+    "SETE LAGOAS",
+    -19.4658,
+    -44.2467
+   ],
+   [
+    "BHZ",
+    "BELO HORIZONTE",
+    -19.9167,
+    -43.9345
+   ]
+  ]
+ },
+ {
+  "codigo": "L117",
+  "desc": "L117 - BSB X UBA",
+  "label": "BSBxUBA",
+  "stops": [
+   [
+    "BSB",
+    "BRASILIA",
+    -15.7939,
+    -47.8828
+   ],
+   [
+    "CAT",
+    "CATALAO",
+    -18.1659,
+    -47.9463
+   ],
+   [
+    "UDI",
+    "UBERLANDIA",
+    -18.9186,
+    -48.2772
+   ],
+   [
+    "UBA",
+    "UBERABA",
+    -19.7472,
+    -47.9392
+   ]
+  ]
+ },
+ {
+  "codigo": "L118",
+  "desc": "L118 - UBA X BSB",
+  "label": "UBAxBSB",
+  "stops": [
+   [
+    "UBA",
+    "UBERABA",
+    -19.7472,
+    -47.9392
+   ],
+   [
+    "UDI",
+    "UBERLANDIA",
+    -18.9186,
+    -48.2772
+   ],
+   [
+    "CAT",
+    "CATALAO",
+    -18.1659,
+    -47.9463
+   ],
+   [
+    "BSB",
+    "BRASILIA",
+    -15.7939,
+    -47.8828
+   ]
+  ]
+ },
+ {
+  "codigo": "L119",
+  "desc": "L119 - SPO X RPO",
+  "label": "SPOxRPO",
+  "stops": [
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ],
+   [
+    "CAM",
+    "CAMPINAS",
+    -22.9099,
+    -47.0626
+   ],
+   [
+    "RPO",
+    "RIBEIRAO PRETO",
+    -21.1775,
+    -47.8103
+   ]
+  ]
+ },
+ {
+  "codigo": "L120",
+  "desc": "L120 - RPO X SPO",
+  "label": "RPOxSPO",
+  "stops": [
+   [
+    "RPO",
+    "RIBEIRAO PRETO",
+    -21.1775,
+    -47.8103
+   ],
+   [
+    "CAM",
+    "CAMPINAS",
+    -22.9099,
+    -47.0626
+   ],
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ]
+  ]
+ },
+ {
+  "codigo": "L121",
+  "desc": "L121 - SPO X UDI",
+  "label": "SPOxUDI",
+  "stops": [
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ],
+   [
+    "CAM",
+    "CAMPINAS",
+    -22.9099,
+    -47.0626
+   ],
+   [
+    "RPO",
+    "RIBEIRAO PRETO",
+    -21.1775,
+    -47.8103
+   ],
+   [
+    "UBA",
+    "UBERABA",
+    -19.7472,
+    -47.9392
+   ],
+   [
+    "UDI",
+    "UBERLANDIA",
+    -18.9186,
+    -48.2772
+   ]
+  ]
+ },
+ {
+  "codigo": "L122",
+  "desc": "L122 - UDI X SPO",
+  "label": "UDIxSPO",
+  "stops": [
+   [
+    "UDI",
+    "UBERLANDIA",
+    -18.9186,
+    -48.2772
+   ],
+   [
+    "UBA",
+    "UBERABA",
+    -19.7472,
+    -47.9392
+   ],
+   [
+    "RPO",
+    "RIBEIRAO PRETO",
+    -21.1775,
+    -47.8103
+   ],
+   [
+    "CAM",
+    "CAMPINAS",
+    -22.9099,
+    -47.0626
+   ],
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ]
+  ]
+ },
+ {
+  "codigo": "L123",
+  "desc": "L123 - BSB X GYN",
+  "label": "BSBxGYN",
+  "stops": [
+   [
+    "BSB",
+    "BRASILIA",
+    -15.7939,
+    -47.8828
+   ],
+   [
+    "ANA",
+    "ANAPOLIS",
+    -16.3281,
+    -48.9534
+   ],
+   [
+    "GYN",
+    "GOIANIA",
+    -16.6869,
+    -49.2648
+   ]
+  ]
+ },
+ {
+  "codigo": "L124",
+  "desc": "L124 - GYN X BSB",
+  "label": "GYNxBSB",
+  "stops": [
+   [
+    "GYN",
+    "GOIANIA",
+    -16.6869,
+    -49.2648
+   ],
+   [
+    "ANA",
+    "ANAPOLIS",
+    -16.3281,
+    -48.9534
+   ],
+   [
+    "BSB",
+    "BRASILIA",
+    -15.7939,
+    -47.8828
+   ]
+  ]
+ },
+ {
+  "codigo": "L125",
+  "desc": "L125 - GYN X JTI",
+  "label": "GYNxJTI",
+  "stops": [
+   [
+    "GYN",
+    "GOIANIA",
+    -16.6869,
+    -49.2648
+   ],
+   [
+    "RVD",
+    "RIO VERDE",
+    -17.7923,
+    -50.9192
+   ],
+   [
+    "JTI",
+    "JATAI",
+    -17.8784,
+    -51.7204
+   ]
+  ]
+ },
+ {
+  "codigo": "L126",
+  "desc": "L126 - JTI X GYN",
+  "label": "JTIxGYN",
+  "stops": [
+   [
+    "JTI",
+    "JATAI",
+    -17.8784,
+    -51.7204
+   ],
+   [
+    "RVD",
+    "RIO VERDE",
+    -17.7923,
+    -50.9192
+   ],
+   [
+    "GYN",
+    "GOIANIA",
+    -16.6869,
+    -49.2648
+   ]
+  ]
+ },
+ {
+  "codigo": "L127",
+  "desc": "L127 - BSB X RVD",
+  "label": "BSBxRVD",
+  "stops": [
+   [
+    "BSB",
+    "BRASILIA",
+    -15.7939,
+    -47.8828
+   ],
+   [
+    "ANA",
+    "ANAPOLIS",
+    -16.3281,
+    -48.9534
+   ],
+   [
+    "GYN",
+    "GOIANIA",
+    -16.6869,
+    -49.2648
+   ],
+   [
+    "RVD",
+    "RIO VERDE",
+    -17.7923,
+    -50.9192
+   ]
+  ]
+ },
+ {
+  "codigo": "L128",
+  "desc": "L128 - RVD X BSB",
+  "label": "RVDxBSB",
+  "stops": [
+   [
+    "RVD",
+    "RIO VERDE",
+    -17.7923,
+    -50.9192
+   ],
+   [
+    "GYN",
+    "GOIANIA",
+    -16.6869,
+    -49.2648
+   ],
+   [
+    "ANA",
+    "ANAPOLIS",
+    -16.3281,
+    -48.9534
+   ],
+   [
+    "BSB",
+    "BRASILIA",
+    -15.7939,
+    -47.8828
+   ]
+  ]
+ },
+ {
+  "codigo": "L129",
+  "desc": "L129 - SPO X CUR",
+  "label": "SPOxCUR",
+  "stops": [
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ],
+   [
+    "REG",
+    "REGISTRO",
+    -24.4872,
+    -47.8442
+   ],
+   [
+    "CUR",
+    "CURITIBA",
+    -25.4284,
+    -49.2733
+   ]
+  ]
+ },
+ {
+  "codigo": "L130",
+  "desc": "L130 - CUR X SPO",
+  "label": "CURxSPO",
+  "stops": [
+   [
+    "CUR",
+    "CURITIBA",
+    -25.4284,
+    -49.2733
+   ],
+   [
+    "REG",
+    "REGISTRO",
+    -24.4872,
+    -47.8442
+   ],
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ]
+  ]
+ },
+ {
+  "codigo": "L131",
+  "desc": "L131 - CUR X FLN",
+  "label": "CURxFLN",
+  "stops": [
+   [
+    "CUR",
+    "CURITIBA",
+    -25.4284,
+    -49.2733
+   ],
+   [
+    "JOI",
+    "JOINVILLE",
+    -26.3045,
+    -48.8487
+   ],
+   [
+    "FLN",
+    "FLORIANOPOLIS",
+    -27.5954,
+    -48.548
+   ]
+  ]
+ },
+ {
+  "codigo": "L132",
+  "desc": "L132 - FLN X CUR",
+  "label": "FLNxCUR",
+  "stops": [
+   [
+    "FLN",
+    "FLORIANOPOLIS",
+    -27.5954,
+    -48.548
+   ],
+   [
+    "JOI",
+    "JOINVILLE",
+    -26.3045,
+    -48.8487
+   ],
+   [
+    "CUR",
+    "CURITIBA",
+    -25.4284,
+    -49.2733
+   ]
+  ]
+ },
+ {
+  "codigo": "L133",
+  "desc": "L133 - SPO X FLN",
+  "label": "SPOxFLN",
+  "stops": [
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ],
+   [
+    "REG",
+    "REGISTRO",
+    -24.4872,
+    -47.8442
+   ],
+   [
+    "CUR",
+    "CURITIBA",
+    -25.4284,
+    -49.2733
+   ],
+   [
+    "JOI",
+    "JOINVILLE",
+    -26.3045,
+    -48.8487
+   ],
+   [
+    "FLN",
+    "FLORIANOPOLIS",
+    -27.5954,
+    -48.548
+   ]
+  ]
+ },
+ {
+  "codigo": "L134",
+  "desc": "L134 - FLN X SPO",
+  "label": "FLNxSPO",
+  "stops": [
+   [
+    "FLN",
+    "FLORIANOPOLIS",
+    -27.5954,
+    -48.548
+   ],
+   [
+    "JOI",
+    "JOINVILLE",
+    -26.3045,
+    -48.8487
+   ],
+   [
+    "CUR",
+    "CURITIBA",
+    -25.4284,
+    -49.2733
+   ],
+   [
+    "REG",
+    "REGISTRO",
+    -24.4872,
+    -47.8442
+   ],
+   [
+    "SPO",
+    "SAO PAULO",
+    -23.5505,
+    -46.6333
+   ]
+  ]
+ },
+ {
+  "codigo": "L135",
+  "desc": "L135 - RIO X CBF",
+  "label": "RIOxCBF",
+  "stops": [
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ],
+   [
+    "RBO",
+    "RIO BONITO",
+    -22.7085,
+    -42.6094
+   ],
+   [
+    "CBF",
+    "CABO FRIO",
+    -22.8894,
+    -42.0286
+   ]
+  ]
+ },
+ {
+  "codigo": "L136",
+  "desc": "L136 - CBF X RIO",
+  "label": "CBFxRIO",
+  "stops": [
+   [
+    "CBF",
+    "CABO FRIO",
+    -22.8894,
+    -42.0286
+   ],
+   [
+    "RBO",
+    "RIO BONITO",
+    -22.7085,
+    -42.6094
+   ],
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ]
+  ]
+ },
+ {
+  "codigo": "L137",
+  "desc": "L137 - RIO X CPS",
+  "label": "RIOxCPS",
+  "stops": [
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ],
+   [
+    "RBO",
+    "RIO BONITO",
+    -22.7085,
+    -42.6094
+   ],
+   [
+    "MAC",
+    "MACAE",
+    -22.3768,
+    -41.7869
+   ],
+   [
+    "CPS",
+    "CAMPOS DOS GOYTACAZES",
+    -21.7545,
+    -41.3244
+   ]
+  ]
+ },
+ {
+  "codigo": "L138",
+  "desc": "L138 - CPS X RIO",
+  "label": "CPSxRIO",
+  "stops": [
+   [
+    "CPS",
+    "CAMPOS DOS GOYTACAZES",
+    -21.7545,
+    -41.3244
+   ],
+   [
+    "MAC",
+    "MACAE",
+    -22.3768,
+    -41.7869
+   ],
+   [
+    "RBO",
+    "RIO BONITO",
+    -22.7085,
+    -42.6094
+   ],
+   [
+    "RIO",
+    "RIO DE JANEIRO",
+    -22.9068,
+    -43.1729
+   ]
+  ]
+ },
+ {
+  "codigo": "L139",
+  "desc": "L139 - SSA X VDC",
+  "label": "SSAxVDC",
+  "stops": [
+   [
+    "SSA",
+    "SALVADOR",
+    -12.9777,
+    -38.5016
+   ],
+   [
+    "FSA",
+    "FEIRA DE SANTANA",
+    -12.2664,
+    -38.9663
+   ],
+   [
+    "VDC",
+    "VITORIA DA CONQUISTA",
+    -14.8615,
+    -40.8442
+   ]
+  ]
+ },
+ {
+  "codigo": "L140",
+  "desc": "L140 - VDC X SSA",
+  "label": "VDCxSSA",
+  "stops": [
+   [
+    "VDC",
+    "VITORIA DA CONQUISTA",
+    -14.8615,
+    -40.8442
+   ],
+   [
+    "FSA",
+    "FEIRA DE SANTANA",
+    -12.2664,
+    -38.9663
+   ],
+   [
+    "SSA",
+    "SALVADOR",
+    -12.9777,
+    -38.5016
+   ]
+  ]
+ },
+ {
+  "codigo": "L141",
+  "desc": "L141 - SSA X FSA",
+  "label": "SSAxFSA",
+  "stops": [
+   [
+    "SSA",
+    "SALVADOR",
+    -12.9777,
+    -38.5016
+   ],
+   [
+    "FSA",
+    "FEIRA DE SANTANA",
+    -12.2664,
+    -38.9663
+   ]
+  ]
+ },
+ {
+  "codigo": "L142",
+  "desc": "L142 - FSA X SSA",
+  "label": "FSAxSSA",
+  "stops": [
+   [
+    "FSA",
+    "FEIRA DE SANTANA",
+    -12.2664,
+    -38.9663
+   ],
+   [
+    "SSA",
+    "SALVADOR",
+    -12.9777,
+    -38.5016
+   ]
+  ]
+ },
+ {
+  "codigo": "L143",
+  "desc": "L143 - JDF X VRD",
+  "label": "JDFxVRD",
+  "stops": [
+   [
+    "JDF",
+    "JUIZ DE FORA",
+    -21.7642,
+    -43.3496
+   ],
+   [
+    "TRR",
+    "TRES RIOS",
+    -22.1165,
+    -43.2085
+   ],
+   [
+    "VRD",
+    "VOLTA REDONDA",
+    -22.5232,
+    -44.1041
+   ]
+  ]
+ },
+ {
+  "codigo": "L144",
+  "desc": "L144 - VRD X JDF",
+  "label": "VRDxJDF",
+  "stops": [
+   [
+    "VRD",
+    "VOLTA REDONDA",
+    -22.5232,
+    -44.1041
+   ],
+   [
+    "TRR",
+    "TRES RIOS",
+    -22.1165,
+    -43.2085
+   ],
+   [
+    "JDF",
+    "JUIZ DE FORA",
+    -21.7642,
+    -43.3496
+   ]
+  ]
+ }
+]

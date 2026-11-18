@@ -345,3 +345,42 @@ body.mapa-pagina { overflow: hidden; }
   .aba-painel { display: none; }
   .painel-oc { right: 12px; width: auto; max-height: calc(54% - 24px); }
 }
+
+/* pontualidade no mapa: cor do ônibus pela faixa de atraso do serviço, rótulo "+NN" e lista "Atrasados agora" */
+.pont-bloco { display: flex; flex-direction: column; gap: 6px; margin: 10px 0 6px; padding-top: 10px; border-top: 1px solid var(--borda); }
+.pont-titulo { font-size: .8rem; color: var(--texto-2); }
+.segmentado { display: flex; border: 1px solid var(--borda); border-radius: 8px; overflow: hidden; }
+.segmentado button { flex: 1; border: 0; background: #fff; color: var(--azul-escuro); padding: 7px 8px; font: inherit; font-size: .86rem; font-weight: 600; cursor: pointer; }
+.segmentado button + button { border-left: 1px solid var(--borda); }
+.segmentado button[aria-pressed="true"] { background: var(--azul-escuro); color: #fff; }
+.segmentado button:focus-visible { outline: 2px solid var(--azul); outline-offset: -2px; }
+.pont-faixas { display: flex; flex-direction: column; gap: 1px; margin-top: 2px; }
+.amostra-pont { width: 14px; height: 14px; border-radius: 4px; flex: none; }
+.pont-rot { flex: 1; }
+.pont-rotulos { font-weight: 500; font-size: .86rem; margin: 4px 0 0; }
+.pont-link { font-size: .86rem; font-weight: 600; }
+#pont-info { margin: 2px 0; }
+.chip-pont { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: .74rem; font-weight: 700; color: #fff; white-space: nowrap; line-height: 1.5; }
+.tooltip-veiculo .tt-pont { margin-top: 4px; max-width: 300px; white-space: normal; }
+.rotulo-at { position: absolute; left: 50%; bottom: 23px; transform: translateX(-50%); z-index: 4; color: #fff; font: 700 11px/15px system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 1px 6px; border-radius: 7px; white-space: nowrap; box-shadow: 0 0 0 1.5px #fff, 0 1px 3px rgba(0,0,0,.35); font-variant-numeric: tabular-nums; }
+.painel-at { position: absolute; left: 12px; bottom: 12px; z-index: 500; width: 340px; max-width: calc(100% - 24px); max-height: calc(100% - 24px); display: flex; flex-direction: column; background: rgba(15,27,42,.95); color: #E6EDF5; border-radius: 14px; box-shadow: 0 8px 24px rgba(10,20,35,.28); overflow: hidden; }
+.mapa-area.com-atrasos.oc-aberto .painel-oc { max-height: calc(60% - 18px); }
+.mapa-area.com-atrasos.oc-aberto .painel-at { max-height: calc(40% - 18px); }
+.painel-at .painel-oc-total { background: #9E1C1C; }
+.painel-at-lista { list-style: none; margin: 0; flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; gap: 2px; padding: 0 6px 10px 8px; }
+.at-item { display: grid; grid-template-columns: 1fr auto; gap: 1px 10px; padding: 7px 8px; border-radius: 8px; cursor: pointer; }
+.at-item:hover { background: #182638; }
+.at-item:focus-visible, .pilula-at:focus-visible { outline: 2px solid #8FB8F0; outline-offset: 1px; }
+.at-linha { font-size: 13px; font-weight: 600; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.at-min { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 700; color: #fff; font-variant-numeric: tabular-nums; }
+.at-marca { width: 10px; height: 10px; border-radius: 3px; }
+.at-sub { grid-column: 1 / -1; font-size: 12px; color: #9FB0C3; }
+.pilula-at { position: absolute; left: 12px; bottom: 12px; z-index: 500; height: 44px; display: flex; align-items: center; gap: 10px; padding: 0 14px; background: rgba(15,27,42,.95); color: #fff; border: 0; border-radius: 999px; box-shadow: 0 6px 18px rgba(10,20,35,.28); font: inherit; font-size: 13px; font-weight: 600; cursor: pointer; }
+.pilula-at .painel-oc-total { background: #9E1C1C; }
+@media (max-width: 760px) {
+  .painel-at { top: 64px; bottom: auto; right: 12px; width: auto; max-height: calc(46% - 70px); }
+  .pilula-at { top: 64px; bottom: auto; }
+  .mapa-area.com-atrasos.oc-aberto .painel-oc { max-height: calc(54% - 24px); }
+  /* no celular as duas listas não cabem juntas: com as ocorrências abertas, a de atrasados espera */
+  .mapa-area.oc-aberto .painel-at, .mapa-area.oc-aberto .pilula-at { display: none; }
+}

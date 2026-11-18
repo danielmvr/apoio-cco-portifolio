@@ -9,6 +9,11 @@
  "ocorrencias": 7,
  "carros_com_posicao": 116,
  "carros_sem_posicao": 5,
+ "pontualidade": {
+  "dias": 28,
+  "paradas": 23027,
+  "dia_ruim": "2026-10-06"
+ },
  "empresas": [
   {
    "valor": "ALFA",

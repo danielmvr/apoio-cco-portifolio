@@ -4,18 +4,25 @@ Gera os dados sinteticos da versao de portfolio do Apoio CCO (seed fixa).
 Nada aqui e lido de base real. Cidades e coordenadas sao publicas; camadas,
 locais de apoio, contatos, telefones, regionais e ocorrencias sao inventados
 por regras simples definidas neste arquivo. A frota (prefixos, placas e
-posicoes GPS) vem do projeto irmao Monitoramento de Rodovias, que tambem e
-sintetico: https://github.com/danielmvr/monitoramento-rodovias-portifolio
+posicoes GPS), as linhas e as paradas do dia do snapshot vem do projeto irmao
+Monitoramento de Rodovias, que tambem e sintetico:
+https://github.com/danielmvr/monitoramento-rodovias-portifolio
 
 Saidas (pasta data/):
   camadas.json       camadas do mapa (como as do My Maps que o sistema substitui)
   locais.json        pontos de apoio, bilheterias, paradas, terceiros e regionais,
                      com contatos ficticios
   ocorrencias.json   ocorrencias de socorro abertas, referindo carros da frota
+  localidades.json   siglas das paradas (as cidades) com nome, UF e coordenadas, e as garagens
+  pontualidade/      historico de pontualidade: um atrasos_AAAA-MM-DD.txt por dia (28 dias antes
+                     do dia do snapshot, mesmo layout de 19 colunas do atrasos.txt do Monitoramento)
+                     e index.json com os dias disponiveis
   meta.json          seed, totais e origem da frota
 
 Entrada (pasta data/frota/, copia do repositorio do Monitoramento de Rodovias):
   gps_ultimas_posicoes.csv   ultimas posicoes (layout do exportador original)
+  atrasos.txt                paradas com horario programado e real do dia do snapshot
+  linhas_rotas.json          linhas ficticias com as paradas em ordem
   meta.json                  horario do snapshot sintetico
 
 Uso (na raiz do projeto):
@@ -26,6 +33,7 @@ Uso (na raiz do projeto):
         (atualiza data/frota/ baixando do GitHub antes de gerar)
 """
 import argparse
+import datetime as dt
 import json
 import math
 import os
@@ -41,7 +49,9 @@ FROTA = os.path.join(DATA, "frota")
 
 FLUXO_REPO = "danielmvr/monitoramento-rodovias-portifolio"
 FLUXO_RAW = f"https://raw.githubusercontent.com/{FLUXO_REPO}/main/data/"
-ARQUIVOS_FROTA = ["gps_ultimas_posicoes.csv", "meta.json"]
+ARQUIVOS_FROTA = ["gps_ultimas_posicoes.csv", "meta.json", "atrasos.txt", "linhas_rotas.json"]
+PONTUALIDADE = os.path.join(DATA, "pontualidade")
+DIAS_HISTORICO = 28
 
 rnd = random.Random(SEED)
 
@@ -431,6 +441,190 @@ def gerar_ocorrencias(com_pos, sem_pos):
     return lista
 
 
+
+# --------------------------------------------------------------------------
+# 3) Historico de pontualidade: 28 dias de paradas com horario programado e real
+#    (mesmo layout do atrasos.txt do Monitoramento; so o dia do snapshot vem de la)
+# --------------------------------------------------------------------------
+COLUNAS_ATRASOS = [
+    "dtoper", "servico", "codigo_linha", "descricao_linha", "local_comercial",
+    "horario_sistema", "horario_comercial", "horario_entrada_comercial_real",
+    "horario_partida_comercial_real", "tempo_espera_real", "tempo_atraso",
+    "tempo_tolerancia", "matricula", "nomeguerra", "nome", "prefixo_veiculo",
+    "placa_veiculo", "frota_veiculo", "nomebase",
+]
+FMT_ATR = "%d/%m/%Y %H:%M:%S"
+
+
+def ler_linhas_frota():
+    with open(os.path.join(FROTA, "linhas_rotas.json"), encoding="utf-8") as f:
+        return json.load(f)
+
+
+def ler_atrasos_frota():
+    """Dia do snapshot (atrasos.txt do Monitoramento): carro de cada linha e horarios de saida usados la,
+    para o historico seguir a mesma escala (mesmos carros nas mesmas linhas, horarios parecidos)."""
+    caminho = os.path.join(FROTA, "atrasos.txt")
+    carros_linha, saidas, carros = {}, {}, {}
+    with open(caminho, encoding="utf-8") as f:
+        cab = f.readline().rstrip("\n").split("\t")
+        idx = {c: i for i, c in enumerate(cab)}
+        for linha in f:
+            c = linha.rstrip("\n").split("\t")
+            if len(c) < len(cab) or c[idx["frota_veiculo"]] == "DUPLICADO":
+                continue
+            lin, vei = c[idx["codigo_linha"]], c[idx["prefixo_veiculo"]]
+            carros_linha.setdefault(lin, [])
+            if vei not in carros_linha[lin]:
+                carros_linha[lin].append(vei)
+            carros[vei] = (c[idx["placa_veiculo"]], c[idx["frota_veiculo"]], c[idx["nomebase"]])
+            if c[idx["horario_sistema"]]:
+                h = c[idx["horario_sistema"]][11:16]
+                saidas.setdefault(lin, []).append(h)
+    return carros_linha, saidas, carros
+
+
+def dist_km_pontos(a, b):
+    """Distancia rodoviaria aproximada entre duas paradas [cod, nome, lat, lon]: haversine x 1,25."""
+    return haversine(a[2], a[3], b[2], b[3]) * 1.25
+
+
+def horarios_previstos(stops, partida):
+    """Horarios previstos por parada (70 km/h + 10 min por parada), como no Monitoramento."""
+    t = partida
+    out = [t]
+    for a, b in zip(stops, stops[1:]):
+        km = dist_km_pontos(a, b)
+        t = t + dt.timedelta(minutes=round(km / 70.0 * 60 / 5) * 5 + 10)
+        out.append(t)
+    return out
+
+
+def modelo_atrasos(linhas):
+    """Parametros fixos do modelo (sorteados uma vez): vies de cada linha, vies de cada trecho (alguns trechos
+    cronicos, de entrada nas capitais), efeito da hora de saida e do dia da semana."""
+    vies_linha = {l["codigo"]: rnd.gauss(0, 2.5) for l in linhas}
+    trechos = set()
+    for l in linhas:
+        for a, b in zip(l["stops"], l["stops"][1:]):
+            trechos.add((a[0], b[0]))
+    vies_trecho = {t: rnd.gauss(1.0, 2.0) for t in sorted(trechos)}
+    capitais = {"RIO", "SPO", "BHZ", "BSB", "CUR", "SSA", "GYN"}
+    cronicos = [t for t in sorted(trechos) if t[1] in capitais]
+    for t in rnd.sample(cronicos, min(6, len(cronicos))):
+        vies_trecho[t] += rnd.uniform(6, 14)
+    for t in rnd.sample(sorted(trechos), 4):          # trechos onde o motorista recupera tempo
+        vies_trecho[t] -= rnd.uniform(3, 6)
+    hora = {h: (4 if h in (6, 7, 8, 17, 18, 19) else 1 if 9 <= h <= 16 else 0) for h in range(24)}
+    semana = {0: 0, 1: 0, 2: 0, 3: 1, 4: 3, 5: 1, 6: -2}
+    return {"linha": vies_linha, "trecho": vies_trecho, "hora": hora, "semana": semana}
+
+
+def gerar_dia_atrasos(dia, linhas, carros_linha, saidas_linha, carros, modelo, dia_ruim):
+    """Linhas do atrasos.txt de um dia de operacao: cada carro faz a ida e a volta da sua linha, com saida e
+    perdas por trecho sorteadas do modelo. ~8% das paradas sem hora real e ~2% dos servicos param de transmitir."""
+    linhas_txt = []
+    efeito_dia = rnd.gauss(0, 2) + (15 if dia_ruim else 0)
+    sem = modelo["semana"][dia.weekday()]
+    pares = [(linhas[i], linhas[i + 1]) for i in range(0, len(linhas), 2)]
+    servico_n = 30000000 + (dia.toordinal() % 1000) * 1000
+    for ida, volta in pares:
+        veiculos = carros_linha.get(ida["codigo"]) or carros_linha.get(volta["codigo"]) or []
+        if not veiculos:
+            continue
+        horas = saidas_linha.get(ida["codigo"]) or ["06:00", "09:00", "13:00", "16:30"]
+        for k, vei in enumerate(veiculos):
+            hh, mm = horas[k % len(horas)].split(":")
+            partida = dt.datetime(dia.year, dia.month, dia.day, int(hh), int(mm)) + dt.timedelta(minutes=rnd.choice([0, 0, 0, 15, -15, 30]))
+            placa, frota, base = carros.get(vei, ("ZZZ0A00", "FROTA-ALFA", "BASE"))
+            tol = 9
+            for linha in (ida, volta):
+                if partida.date() != dia:
+                    break
+                prev = horarios_previstos(linha["stops"], partida)
+                servico_n += rnd.randint(7, 97)
+                anomalia = rnd.random() < 0.02
+                corte = rnd.randint(1, len(prev) - 1) if anomalia else len(prev)
+                # saida: hora do dia, dia da semana, dia ruim, vies da linha e um sorteio
+                saida = rnd.gauss(2 + modelo["hora"][partida.hour] + sem + efeito_dia * 0.4 + modelo["linha"][linha["codigo"]] * 0.3, 5)
+                if rnd.random() < 0.08:
+                    saida += rnd.uniform(10, 45)
+                saida = max(-6, saida)
+                atraso = saida
+                reais = []
+                for i, (stop, t_prev) in enumerate(zip(linha["stops"], prev)):
+                    if i > 0:
+                        t = modelo["trecho"].get((linha["stops"][i - 1][0], stop[0]), 0)
+                        perda = rnd.gauss(t + modelo["linha"][linha["codigo"]] * 0.2 + efeito_dia * 0.3, 3)
+                        if rnd.random() < 0.03:
+                            perda += rnd.uniform(20, 90)
+                        atraso = max(-12, atraso + perda)
+                    if i >= corte or (i > 0 and rnd.random() < 0.08):
+                        reais.append((None, None))
+                        continue
+                    real_partida = t_prev + dt.timedelta(minutes=atraso, seconds=rnd.randint(0, 59))
+                    espera = rnd.randint(5, 40) if i == 0 else rnd.randint(2, 12)
+                    entrada = real_partida - dt.timedelta(minutes=espera)
+                    if i == len(prev) - 1:
+                        real_partida = None
+                    reais.append((entrada, real_partida))
+                for i, (stop, t_prev) in enumerate(zip(linha["stops"], prev)):
+                    entrada, real_partida = reais[i]
+                    real = real_partida or entrada
+                    atraso_txt = espera_txt = ""
+                    if real is not None:
+                        atraso_txt = str(math.floor((real - t_prev).total_seconds() / 60))
+                        if entrada and real_partida:
+                            espera_txt = str(round((real_partida - entrada).total_seconds() / 60))
+                    linhas_txt.append("\t".join([
+                        dia.strftime(FMT_ATR), str(servico_n), linha["codigo"], linha["desc"], stop[0],
+                        prev[0].strftime(FMT_ATR) if i == 0 else "", t_prev.strftime(FMT_ATR),
+                        entrada.strftime(FMT_ATR) if entrada else "", real_partida.strftime(FMT_ATR) if real_partida else "",
+                        espera_txt, atraso_txt, str(tol), "XXXX", "XXXX", "XXXX", vei, placa, frota, base,
+                    ]))
+                partida = prev[-1] + dt.timedelta(minutes=rnd.randrange(60, 181, 15))
+    return linhas_txt
+
+
+def gerar_historico(meta_frota):
+    """Um arquivo por dia, nos 28 dias anteriores ao dia do snapshot da frota."""
+    linhas = ler_linhas_frota()
+    carros_linha, saidas, carros = ler_atrasos_frota()
+    modelo = modelo_atrasos(linhas)
+    hoje = dt.date.fromisoformat(meta_frota["agora"][:10])
+    dias = [hoje - dt.timedelta(days=n) for n in range(DIAS_HISTORICO, 0, -1)]
+    dia_ruim = rnd.choice(dias[5:-3])
+    os.makedirs(PONTUALIDADE, exist_ok=True)
+    for antigo in os.listdir(PONTUALIDADE):
+        if antigo.startswith("atrasos_") and antigo.endswith(".txt"):
+            os.remove(os.path.join(PONTUALIDADE, antigo))
+    total = 0
+    for d in dias:
+        txt = gerar_dia_atrasos(d, linhas, carros_linha, saidas, carros, modelo, d == dia_ruim)
+        total += len(txt)
+        with open(os.path.join(PONTUALIDADE, f"atrasos_{d.isoformat()}.txt"), "w", encoding="utf-8", newline="\n") as f:
+            f.write("\t".join(COLUNAS_ATRASOS) + "\n" + "\n".join(txt) + "\n")
+    with open(os.path.join(PONTUALIDADE, "index.json"), "w", encoding="utf-8") as f:
+        json.dump({"dias": [d.isoformat() for d in dias], "hoje": hoje.isoformat(), "arquivo": "atrasos_{dia}.txt",
+                   "hoje_url": FLUXO_RAW + "atrasos.txt", "hoje_reserva": "../frota/atrasos.txt",
+                   "aviso": "Historico sintetico gerado por script; o dia do snapshot vem do Monitoramento de Rodovias."}, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+    return len(dias), total, dia_ruim
+
+
+def gerar_localidades(locais):
+    """Siglas das paradas (as cidades do Monitoramento) com nome, UF e coordenadas; garagens = cidades com
+    um local de garagem no cadastro (o carro parado a ate 1 km delas, sem servico, conta como 'na garagem')."""
+    out = {cod: {"nome": nome, "cidade": nome, "uf": uf, "lat": lat, "lon": lon} for cod, (nome, uf, lat, lon) in CIDADES.items()}
+    # no CSV de posicoes o "local proximo" vem em maiusculas e sem acento (ANAPOLIS)
+    garagens = sorted({sem_acento(l["cidade"]).upper() for l in locais if l["nome"].startswith("Garagem ") and l["ativo"]})
+    return {"localidades": out, "garagens": garagens}
+
+
+def sem_acento(texto):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", texto) if unicodedata.category(c) != "Mn")
+
 # --------------------------------------------------------------------------
 # Frota: copia do repositorio irmao
 # --------------------------------------------------------------------------
@@ -475,8 +669,12 @@ def main():
     with open(os.path.join(FROTA, "meta.json"), encoding="utf-8") as f:
         meta_frota = json.load(f)
 
+    n_dias, n_paradas, dia_ruim = gerar_historico(meta_frota)
+    localidades = gerar_localidades(locais)
+
     salvar_json("camadas.json", camadas)
     salvar_json("locais.json", locais)
+    salvar_json("localidades.json", localidades)
     salvar_json("ocorrencias.json", {"aviso": "Ocorrências fictícias geradas por script; tempos em minutos antes do 'agora' do snapshot.", "lista": ocorrencias})
     salvar_json("meta.json", {
         "seed": SEED,
@@ -484,12 +682,14 @@ def main():
         "camadas": len(camadas), "locais": len(locais), "locais_ativos": sum(1 for l in locais if l["ativo"]),
         "contatos": sum(len(l["contatos"]) for l in locais), "regionais": sum(1 for l in locais if l["poligono"]),
         "ocorrencias": len(ocorrencias), "carros_com_posicao": len(com_pos), "carros_sem_posicao": len(sem_pos),
+        "pontualidade": {"dias": n_dias, "paradas": n_paradas, "dia_ruim": dia_ruim.isoformat()},
         "empresas": EMPRESAS,
         "frota": {"repositorio": FLUXO_REPO, "csv": FLUXO_RAW + "gps_ultimas_posicoes.csv", "meta": FLUXO_RAW + "meta.json",
                   "agora_snapshot": meta_frota.get("agora")},
     })
     print(f"OK: {len(camadas)} camadas, {len(locais)} locais ({sum(len(l['contatos']) for l in locais)} contatos), "
-          f"{len(ocorrencias)} ocorrências, frota com {len(com_pos)} carros posicionados.")
+          f"{len(ocorrencias)} ocorrências, frota com {len(com_pos)} carros posicionados, "
+          f"pontualidade com {n_dias} dias e {n_paradas} paradas (dia ruim: {dia_ruim}).")
 
 
 if __name__ == "__main__":
